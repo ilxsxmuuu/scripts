@@ -49,7 +49,7 @@ Scripts.Button({
     end
 })
 Scripts.Button({
-    Text = "Auto buy [ Revolver, Double barrel 12, pizza, 3400$S ]",
+    Text = "Auto buy [ Revolver, Double barrel 12, pizza, 3440$S ]",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Auto%20buy', true))()
     end
