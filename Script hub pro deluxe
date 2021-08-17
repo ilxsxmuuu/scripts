@@ -131,7 +131,10 @@ Scripts.Button({
 Scripts.Button({
     Text = "Zordion [ precisa de key, mas voce ja sabe qual é ]",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
+        repeat
+	wait()
+	until game:IsLoaded()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/zordion/main/script.lua"))()
     end
 })
 PaginaVendas.Button({
