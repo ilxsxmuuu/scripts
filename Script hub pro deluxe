@@ -4,7 +4,7 @@ local UI = Material.Load({
      Title = "Da hood v3.0",
      Style = 3,
      SizeX = 400,
-     SizeY = 400,
+     SizeY = 300,
      Theme = "Light"
 })
 
@@ -15,8 +15,10 @@ BemVindas.Button({
     Text = "Bem vindo "..game.Players.LocalPlayer.Name.."!"
 })
 BemVindas.Button({
-    Text = "Sair do jogo [ cuidado para nao sair semquerer ]"
+    Text = "Sair do jogo [ cuidado para nn clicar semquerer ]",
     Callback = function()
+        Text = "Saindo do jogo em 3 s..."
+        wait(3)
         game.Players.LocalPlayer:kick()
     end
 })
