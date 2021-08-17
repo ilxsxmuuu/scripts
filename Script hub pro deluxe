@@ -1,0 +1,78 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local UI = Material.Load({
+     Title = "Da hood v3.0",
+     Style = 3,
+     SizeX = 400,
+     SizeY = 300,
+     Theme = "Light"
+})
+
+local BemVindas = UI.New({
+    Title = "Bem-Vindas"
+})
+BemVindas.Button({
+    Text = "Bem vindo "..game.Players.LocalPlayer.Name.."!"
+})
+BemVindas.Button({
+    Text = "Sair do jogo [ cuidado para nao sair semquerer ]"
+    Callback function()
+        game.Players.LocalPlayer:kick()
+    end
+})
+
+local PaginaVendas = UI.New({
+    Title = "Para vender DHC"
+})
+
+local Scripts = UI.New({
+    Title = "Outras scripts"
+})
+Scripts.Button({
+    Text = "Aqui temos algumas scripts para Da hood abaixo!",
+    Callback = function()
+        print("Aqui temos algumas scripts para Da hood abaixo!")
+    end
+})
+Scripts.Button({
+    Text = "Swag mode",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+    end
+})
+Scripts.Button({
+    Text = "Synapse changer [ Animacao ]",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Animation%20changer', true))()
+    end
+})
+Scripts.Button({
+    Text = "Auto buy [ Revolver, Double barrel 12, pizza, 3400$S ]",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Auto%20buy', true))()
+    end
+})
+Scripts.Button({
+    Text = "Todas animações do roblox",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
+    end
+})
+Scripts.Button({
+    Text = "Zordion [ precisa de key, mas voce ja sabe qual é ]",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
+    end
+})
+PaginaVendas.Button({
+    Text = "Crash server",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+    end
+})
+PaginaVendas.Button({
+    Text = "Cash drop",
+    Callback = function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
+    end
+})
