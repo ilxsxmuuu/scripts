@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
-     Title = "Da hood v3.0",
+     Title = "Da hood v3.1",
      Style = 3,
      SizeX = 400,
      SizeY = 300,
@@ -236,4 +236,13 @@ PaginaVendas.Button({
     Callback = function()
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
     end
+})
+local UpdatesPage = UI.New({
+    Title = "Updates!"
+})
+UpdatesPage.Button({
+    Text = "Versão V3.1",
+})
+UpdatesPage.Button({
+    Text = 'Novidades: 3 novas scripts na pagina "Outras scripts!"',
 })
