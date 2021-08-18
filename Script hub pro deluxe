@@ -135,7 +135,7 @@ Scripts.Button({
     end
 })
 Scripts.Button({
-    Text = "Todas animações do roblox",
+    Text = "All animations by roblox",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
     end
