@@ -111,6 +111,18 @@ Scripts.Button({
     end
 })
 Scripts.Button({
+    Text = "Faded script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/nighter132/Faded/main/YesEpic", true))()
+    end
+})
+Scripts.Button({
+    Text = "Valiant",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/valiant', true))()
+    end
+})
+Scripts.Button({
     Text = "Synapse changer [ Animacao ]",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Animation%20changer', true))()
