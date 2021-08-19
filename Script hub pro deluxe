@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
-     Title = "Da hood v3.2",
+     Title = "Da hood v3.3",
      Style = 3,
      SizeX = 400,
      SizeY = 300,
@@ -161,6 +161,22 @@ Scripts.Button({
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
     end
 })
+Scripts.Button({
+    Text = "Auto farm lettuce [ reset to stop ]",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-86, 23, -633)
+wait(0.3)
+while true do
+    fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Lettuce] - $5"].ClickDetector, 1)
+    wait(0.7)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/auto%20equip%20lettuce', true))()
+    wait()
+    game:GetService("Workspace").Players[game.Players.LocalPlayer.Name]["[Lettuce]"]:Activate()
+    wait(0.8)
+end
+
+    end
+})
 PaginaVendas.Button({
     Text = "Crash server",
     Callback = function()
@@ -247,7 +263,7 @@ local UpdatesPage = UI.New({
     Title = "Updates!"
 })
 UpdatesPage.Button({
-    Text = "Versão V3.2",
+    Text = "Versão V3.3",
 })
 UpdatesPage.Button({
     Text = 'Novidades: 1 novas scripts na pagina "Outras scripts!"',
