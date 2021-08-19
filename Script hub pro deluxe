@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
-     Title = "Da hood v3.1",
+     Title = "Da hood v3.2",
      Style = 3,
      SizeX = 400,
      SizeY = 300,
@@ -155,6 +155,12 @@ Scripts.Button({
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/zordion/main/script.lua"))()
     end
 })
+Scripts.Button({
+    Text = "Auto arreset players",
+    Callback = function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
+    end
+})
 PaginaVendas.Button({
     Text = "Crash server",
     Callback = function()
@@ -241,8 +247,8 @@ local UpdatesPage = UI.New({
     Title = "Updates!"
 })
 UpdatesPage.Button({
-    Text = "Versão V3.1",
+    Text = "Versão V3.2",
 })
 UpdatesPage.Button({
-    Text = 'Novidades: 3 novas scripts na pagina "Outras scripts!"',
+    Text = 'Novidades: 1 novas scripts na pagina "Outras scripts!"',
 })
