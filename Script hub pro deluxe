@@ -178,12 +178,6 @@ end
     end
 })
 Scripts.Button({
-    Text = "Polarka ",
-    Callback = function()
-        
-    end
-})
-Scripts.Button({
     Text = "Polarka [ need key ] ",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))();
