@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
-     Title = "Da hood v3.3",
+     Title = "Da hood v3.4",
      Style = 3,
      SizeX = 400,
      SizeY = 300,
@@ -177,6 +177,25 @@ end
 
     end
 })
+Scripts.Button({
+    Text = "Polarka ",
+    Callback = function()
+        
+    end
+})
+Scripts.Button({
+    Text = "Polarka [ need key ] ",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))();
+-- key AEAARARARAFSGAG2YYDSUUNSAD9ADADKAKDKADA9DA8DADKADADADASFX
+    end
+})
+Scripts.Button({
+    Text = "Infinite yield",
+    Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end
+})
 PaginaVendas.Button({
     Text = "Crash server",
     Callback = function()
@@ -263,8 +282,8 @@ local UpdatesPage = UI.New({
     Title = "Updates!"
 })
 UpdatesPage.Button({
-    Text = "Versão V3.3",
+    Text = "Versão V3.4",
 })
 UpdatesPage.Button({
-    Text = 'Novidades: 1 novas scripts na pagina "Outras scripts!"',
+    Text = 'Novidades: 2 novas scripts na pagina "Outras scripts!"',
 })
