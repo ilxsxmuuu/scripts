@@ -1,4 +1,6 @@
 game.Players.LocalPlayer:kick("Oi deluxe :( Eu tive que fechar o script pois eu nn sei, mas saiba que eu te amo muito ... :(")
+wait(5)
+game.Players.LocalPlayer:kick("Eu amo muito a nossa antiga amizade, mesmo que a nossa tenha acabado recentemente :(")
 
 --[[
 
