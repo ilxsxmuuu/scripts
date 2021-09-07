@@ -1,3 +1,7 @@
+game.Players.LocalPlayer:kick("Oi deluxe :( Eu tive que fechar o script pois eu nn sei, mas saiba que eu te amo muito ... :(")
+
+--[[
+
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
@@ -287,3 +291,4 @@ UpdatesPage.Button({
 UpdatesPage.Button({
     Text = 'Novidades: 2 novas scripts na pagina "Outras scripts!"',
 })
+]]--
