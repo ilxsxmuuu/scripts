@@ -1,5 +1,17 @@
-
-
+game.StarterGui:SetCore("SendNotification", {
+Title = "Oi deluxe :(";
+Text = "O script esta carregando em 2 segundos";
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Script do samu";
+Text = "Estamos trabalhando em uma nova atualização da versao v3.5";
+})
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Script do samu";
+Text = "Em breve irar sair essa versão";
+})
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local UI = Material.Load({
