@@ -1373,7 +1373,14 @@ NovaPagina.Button({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Karz1337/ZordOverParty/main/Zord3Crack"))()
     end
 })
-
+NovaPagina.Button({
+    Text = "Anti perma ban",
+    Callback = function()
+    	game.Players.LocalPlayer:kick("Failed...")
+	wait(0.2)
+        game.Players.LocalPlayer:kick("Perma ban.")
+    end
+})
 
 
 
