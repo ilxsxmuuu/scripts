@@ -1,1395 +1,1401 @@
 game.StarterGui:SetCore("SendNotification", {
-Title = "Opa tropaaa";
-Text = 'Novidades chegando! Chegou a atualização v3.5!';
-Duration = 5;
-})
-wait(2)
-local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
-
-local UI = Material.Load({
-     Title = "Da hood v3.5",
-     Style = 3,
-     SizeX = 400,
-     SizeY = 300,
-     Theme = "Light"
-})
-
-local BemVindas = UI.New({
-    Title = "Bem-Vindas"
-})
-BemVindas.Button({
-    Text = "Bem vindo "..game.Players.LocalPlayer.Name.."!"
-})
-BemVindas.Button({
-    Text = "Sair do jogo [ cuidado para nn clicar semquerer ]",
-    Callback = function()
-        local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Text = Instance.new("TextLabel")
-local Button2 = Instance.new("TextButton")
-local Button1 = Instance.new("TextButton")
-
-Button1.Text = "sim" -- Primeiro
-Button2.Text = "nao" -- Segundo
-Title.Text = "Deseja realmente" -- Titulo
-Text.Text = "sair?" -- Texto
-function Ativa()
-	game.Players.LocalPlayer:kick()
-end
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Frame.BackgroundTransparency = 0.400
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(1.833999991, 0, 0.81400001, 0)
-Frame.Size = UDim2.new(0, 170, 0, 56)
-
-Title.Name = "Title"
-Title.Parent = Frame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.Size = UDim2.new(1, 0, 0, 15)
-Title.Font = Enum.Font.SourceSans
-Title.TextColor3 = Color3.fromRGB(0, 0, 0)
-Title.TextSize = 14.000
-
-Text.Name = "Text"
-Text.Parent = Frame
-Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text.BackgroundTransparency = 1.000
-Text.Position = UDim2.new(0, 0, 0.357142866, 0)
-Text.Size = UDim2.new(1, 0, 0.375, 15)
-Text.Font = Enum.Font.SourceSans
-Text.TextColor3 = Color3.fromRGB(0, 0, 0)
-Text.TextSize = 14.000
-Text.TextWrapped = true
-
-Button2.Name = "Button2"
-Button2.Parent = Frame
-Button2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Button2.BackgroundTransparency = 0.400
-Button2.Position = UDim2.new(0.517647088, 0, 1, 0)
-Button2.Size = UDim2.new(0, 82, 0, 26)
-Button2.Font = Enum.Font.SourceSans
-Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button2.TextSize = 14.000
-Button2.MouseButton1Click:Connect(function()
-	Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
-end)
-Button1.Name = "Button1"
-Button1.Parent = Frame
-Button1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Button1.BackgroundTransparency = 0.400
-Button1.Position = UDim2.new(0, 0, 1, 0)
-Button1.Size = UDim2.new(0, 88, 0, 26)
-Button1.Font = Enum.Font.SourceSans
-Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button1.TextSize = 14.000
-Button1.MouseButton1Click:Connect(function()
-	Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
-	Ativa()
-end)
-wait()
-Frame:TweenPosition(UDim2.new(0.833999991, 0, 0.81400001, 0), "Out", "Quart", 1)
-    end
-})
-
-local PaginaVendas = UI.New({
-    Title = "Para vender DHC"
-})
-
-local Scripts = UI.New({
-    Title = "Outras scripts"
-})
-Scripts.Button({
-    Text = "Aqui temos algumas scripts para Da hood abaixo!",
-    Callback = function()
-        print("Aqui temos algumas scripts para Da hood abaixo!")
-    end
-})
-Scripts.Button({
-    Text = "Swag mode",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
-    end
-})
-Scripts.Button({
-    Text = "Faded script",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/nighter132/Faded/main/YesEpic", true))()
-    end
-})
-Scripts.Button({
-    Text = "Valiant",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/valiant', true))()
-    end
-})
-Scripts.Button({
-    Text = "Racemodex [ Cracked ]",
-    Callback = function()
-        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\69\122\100\114\111\112\49\49\47\65\110\116\105\45\115\116\111\109\112\47\109\97\105\110\47\69\120\116\114\97\83\116\117\102\102\34\41\41\40\41\10")()
-    end
-})
-Scripts.Button({
-    Text = "Synapse changer [ Animacao ]",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Animation%20changer', true))()
-    end
-})
-Scripts.Button({
-    Text = "Auto buy [ Revolver, Double barrel 12, pizza, 3440$S ]",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Auto%20buy', true))()
-    end
-})
-Scripts.Button({
-    Text = "All animations by roblox",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
-    end
-})
-Scripts.Button({
-    Text = "Zordion",
-    Callback = function()
-        repeat
-	wait()
-	until game:IsLoaded()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/zordion/main/script.lua"))()
-    end
-})
-Scripts.Button({
-    Text = "Raycodex",
-    Callback = function()
-        loadstring(game:GetObjects("rbxassetid://5812737894")[1].Source)()
-    end
-})
-Scripts.Button({
-    Text = "Auto arreset players",
-    Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
-    end
-})
-Scripts.Button({
-    Text = "Auto farm lettuce [ reset to stop ]",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-86, 23, -633)
-wait(0.3)
-while true do
-    fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Lettuce] - $5"].ClickDetector, 1)
-    wait(0.7)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/auto%20equip%20lettuce', true))()
-    wait()
-    game:GetService("Workspace").Players[game.Players.LocalPlayer.Name]["[Lettuce]"]:Activate()
-    wait(0.8)
-end
-
-    end
-})
-Scripts.Button({
-    Text = "Polarka [ need key ] ",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))();
--- key AEAARARARAFSGAG2YYDSUUNSAD9ADADKAKDKADA9DA8DADKADADADASFX
-    end
-})
-Scripts.Button({
-    Text = "Infinite yield",
-    Callback = function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-    end
-})
-PaginaVendas.Button({
-    Text = "Crash server",
-    Callback = function()
-        local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Text = Instance.new("TextLabel")
-local Button2 = Instance.new("TextButton")
-local Button1 = Instance.new("TextButton")
-
-Button1.Text = "sim" -- Primeiro
-Button2.Text = "nao" -- Segundo
-Title.Text = "Deseja realmente" -- Titulo
-Text.Text = "Executar, Crash server?" -- Texto
-function Ativa()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
-end
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Frame.BackgroundTransparency = 0.400
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(1.833999991, 0, 0.81400001, 0)
-Frame.Size = UDim2.new(0, 170, 0, 56)
-
-Title.Name = "Title"
-Title.Parent = Frame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.Size = UDim2.new(1, 0, 0, 15)
-Title.Font = Enum.Font.SourceSans
-Title.TextColor3 = Color3.fromRGB(0, 0, 0)
-Title.TextSize = 14.000
-
-Text.Name = "Text"
-Text.Parent = Frame
-Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text.BackgroundTransparency = 1.000
-Text.Position = UDim2.new(0, 0, 0.357142866, 0)
-Text.Size = UDim2.new(1, 0, 0.375, 15)
-Text.Font = Enum.Font.SourceSans
-Text.TextColor3 = Color3.fromRGB(0, 0, 0)
-Text.TextSize = 14.000
-Text.TextWrapped = true
-
-Button2.Name = "Button2"
-Button2.Parent = Frame
-Button2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Button2.BackgroundTransparency = 0.400
-Button2.Position = UDim2.new(0.517647088, 0, 1, 0)
-Button2.Size = UDim2.new(0, 82, 0, 26)
-Button2.Font = Enum.Font.SourceSans
-Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button2.TextSize = 14.000
-Button2.MouseButton1Click:Connect(function()
-	Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
-end)
-Button1.Name = "Button1"
-Button1.Parent = Frame
-Button1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-Button1.BackgroundTransparency = 0.400
-Button1.Position = UDim2.new(0, 0, 1, 0)
-Button1.Size = UDim2.new(0, 88, 0, 26)
-Button1.Font = Enum.Font.SourceSans
-Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button1.TextSize = 14.000
-Button1.MouseButton1Click:Connect(function()
-	Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
-	Ativa()
-end)
-wait()
-Frame:TweenPosition(UDim2.new(0.833999991, 0, 0.81400001, 0), "Out", "Quart", 1)
-    end
-})
-PaginaVendas.Button({
-    Text = "Cash drop",
-    Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
-    end
-})
-local NovaPagina = UI.New({
-    Title = "Novos!"
-})
-NovaPagina.Button({
-    Text = 'A versão v3.5 Chegou!!',
-})
-NovaPagina.Button({
-    Text = "Scripts novas para da hood abaixo!",
-    Callback = function()
-        
-    end
-})
-NovaPagina.Button({
-    Text = "Destiny",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))();
-    end
-})
-NovaPagina.Button({
-    Text = 'Meu novo menu extra [ Aperte "P" para abrir ]',
-    Callback = function()
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UIGradient = Instance.new("UIGradient")
-local NomeDoMenu = Instance.new("TextLabel")
-local UIGradient_2 = Instance.new("UIGradient")
-local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
-local AbaMeepCity = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local UIGradient_3 = Instance.new("UIGradient")
-local Plus = Instance.new("TextButton")
-local UIGradient_4 = Instance.new("UIGradient")
-local UICorner_4 = Instance.new("UICorner")
-local arrow_forward = Instance.new("ImageButton")
-local Bombox = Instance.new("TextButton")
-local UIGradient_5 = Instance.new("UIGradient")
-local UICorner_5 = Instance.new("UICorner")
-local arrow_forward_2 = Instance.new("ImageButton")
-local MoneyMeepCity = Instance.new("TextButton")
-local UIGradient_6 = Instance.new("UIGradient")
-local UICorner_6 = Instance.new("UICorner")
-local arrow_forward_3 = Instance.new("ImageButton")
-local AbaDaHood = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
-local UIGradient_7 = Instance.new("UIGradient")
-local SwagMode = Instance.new("TextButton")
-local UIGradient_8 = Instance.new("UIGradient")
-local UICorner_8 = Instance.new("UICorner")
-local arrow_forward_4 = Instance.new("ImageButton")
-local Faded = Instance.new("TextButton")
-local UIGradient_9 = Instance.new("UIGradient")
-local UICorner_9 = Instance.new("UICorner")
-local arrow_forward_5 = Instance.new("ImageButton")
-local Destiny = Instance.new("TextButton")
-local UIGradient_10 = Instance.new("UIGradient")
-local UICorner_10 = Instance.new("UICorner")
-local arrow_forward_6 = Instance.new("ImageButton")
-local AbaAdoptme = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local UIGradient_11 = Instance.new("UIGradient")
-local Adoptscript = Instance.new("TextButton")
-local UIGradient_12 = Instance.new("UIGradient")
-local UICorner_12 = Instance.new("UICorner")
-local arrow_forward_7 = Instance.new("ImageButton")
-local AbaJailbreak = Instance.new("Frame")
-local UICorner_13 = Instance.new("UICorner")
-local UIGradient_13 = Instance.new("UIGradient")
-local JailbreakScript = Instance.new("TextButton")
-local UIGradient_14 = Instance.new("UIGradient")
-local UICorner_14 = Instance.new("UICorner")
-local arrow_forward_8 = Instance.new("ImageButton")
-local AbaExtras = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
-local UIGradient_15 = Instance.new("UIGradient")
-local CorrerRapido = Instance.new("TextButton")
-local UIGradient_16 = Instance.new("UIGradient")
-local UICorner_16 = Instance.new("UICorner")
-local arrow_forward_9 = Instance.new("ImageButton")
-local PularAlto = Instance.new("TextButton")
-local UIGradient_17 = Instance.new("UIGradient")
-local UICorner_17 = Instance.new("UICorner")
-local arrow_forward_10 = Instance.new("ImageButton")
-local Admin = Instance.new("TextButton")
-local UIGradient_18 = Instance.new("UIGradient")
-local UICorner_18 = Instance.new("UICorner")
-local arrow_forward_11 = Instance.new("ImageButton")
-local CorrerNormal = Instance.new("TextButton")
-local UIGradient_19 = Instance.new("UIGradient")
-local UICorner_19 = Instance.new("UICorner")
-local arrow_forward_12 = Instance.new("ImageButton")
-local PularNormal = Instance.new("TextButton")
-local UIGradient_20 = Instance.new("UIGradient")
-local UICorner_20 = Instance.new("UICorner")
-local arrow_forward_13 = Instance.new("ImageButton")
-local Aba1 = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local UIGradient_21 = Instance.new("UIGradient")
-local Jogo1 = Instance.new("TextButton")
-local UIGradient_22 = Instance.new("UIGradient")
-local UICorner_22 = Instance.new("UICorner")
-local arrow_forward_14 = Instance.new("ImageButton")
-local Jogo2 = Instance.new("TextButton")
-local UIGradient_23 = Instance.new("UIGradient")
-local UICorner_23 = Instance.new("UICorner")
-local arrow_forward_15 = Instance.new("ImageButton")
-local Jogo3 = Instance.new("TextButton")
-local UIGradient_24 = Instance.new("UIGradient")
-local UICorner_24 = Instance.new("UICorner")
-local arrow_forward_16 = Instance.new("ImageButton")
-local Jogo4 = Instance.new("TextButton")
-local UIGradient_25 = Instance.new("UIGradient")
-local UICorner_25 = Instance.new("UICorner")
-local arrow_forward_17 = Instance.new("ImageButton")
-local Jogo5 = Instance.new("TextButton")
-local UIGradient_26 = Instance.new("UIGradient")
-local UICorner_26 = Instance.new("UICorner")
-local arrow_forward_18 = Instance.new("ImageButton")
-
---Properties:
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(73, 49, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.619418859, 0, 0.132163748, 0)
-Frame.Size = UDim2.new(0, 389, 0, 629)
-Frame.Visible = false
-Frame.Active = true
-Frame.Draggable = true
-
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient.Parent = Frame
-
-NomeDoMenu.Name = "NomeDoMenu"
-NomeDoMenu.Parent = Frame
-NomeDoMenu.BackgroundColor3 = Color3.fromRGB(113, 103, 255)
-NomeDoMenu.Position = UDim2.new(0, 0, 0.0047694752, 0)
-NomeDoMenu.Size = UDim2.new(0, 389, 0, 68)
-NomeDoMenu.ZIndex = 2
-NomeDoMenu.Font = Enum.Font.SourceSansBold
-NomeDoMenu.Text = "MOD MENU V2.3"
-NomeDoMenu.TextColor3 = Color3.fromRGB(0, 0, 0)
-NomeDoMenu.TextSize = 58.000
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_2.Parent = NomeDoMenu
-
-UICorner.CornerRadius = UDim.new(0, 4)
-UICorner.Parent = NomeDoMenu
-
-UICorner_2.CornerRadius = UDim.new(0, 4)
-UICorner_2.Parent = Frame
-
-AbaMeepCity.Name = "AbaMeepCity"
-AbaMeepCity.Parent = Frame
-AbaMeepCity.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-AbaMeepCity.BackgroundTransparency = 0.050
-AbaMeepCity.Position = UDim2.new(0, 0, 0.101748809, 0)
-AbaMeepCity.Size = UDim2.new(0, 389, 0, 565)
-AbaMeepCity.Visible = false
-
-UICorner_3.CornerRadius = UDim.new(0, 4)
-UICorner_3.Parent = AbaMeepCity
-
-UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_3.Parent = AbaMeepCity
-
-Plus.Name = "Plus"
-Plus.Parent = AbaMeepCity
-Plus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Plus.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-Plus.Size = UDim2.new(0, 308, 0, 42)
-Plus.Font = Enum.Font.Roboto
-Plus.Text = "Plus gratis"
-Plus.TextColor3 = Color3.fromRGB(0, 0, 0)
-Plus.TextSize = 45.000
-Plus.MouseButton1Click:Connect(function()
-    game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].PLUS.Value = true
-end)
-
-UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_4.Parent = Plus
-
-UICorner_4.CornerRadius = UDim.new(0, 4)
-UICorner_4.Parent = Plus
-
-arrow_forward.Name = "arrow_forward"
-arrow_forward.Parent = Plus
-arrow_forward.BackgroundTransparency = 1.000
-arrow_forward.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward.ZIndex = 2
-arrow_forward.Image = "rbxassetid://3926307971"
-arrow_forward.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward.ImageRectSize = Vector2.new(36, 36)
-
-Bombox.Name = "Bombox"
-Bombox.Parent = AbaMeepCity
-Bombox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bombox.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
-Bombox.Size = UDim2.new(0, 308, 0, 42)
-Bombox.Font = Enum.Font.Roboto
-Bombox.Text = "Bombox gratis"
-Bombox.TextColor3 = Color3.fromRGB(0, 0, 0)
-Bombox.TextSize = 45.000
-Bombox.MouseButton1Click:Connect(function()
-    game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].BoomBox.Value = true
-end)
-
-UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_5.Parent = Bombox
-
-UICorner_5.CornerRadius = UDim.new(0, 4)
-UICorner_5.Parent = Bombox
-
-arrow_forward_2.Name = "arrow_forward"
-arrow_forward_2.Parent = Bombox
-arrow_forward_2.BackgroundTransparency = 1.000
-arrow_forward_2.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_2.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_2.ZIndex = 2
-arrow_forward_2.Image = "rbxassetid://3926307971"
-arrow_forward_2.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_2.ImageRectSize = Vector2.new(36, 36)
-
-MoneyMeepCity.Name = "MoneyMeepCity"
-MoneyMeepCity.Parent = AbaMeepCity
-MoneyMeepCity.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MoneyMeepCity.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
-MoneyMeepCity.Size = UDim2.new(0, 308, 0, 42)
-MoneyMeepCity.Font = Enum.Font.Roboto
-MoneyMeepCity.Text = "Money"
-MoneyMeepCity.TextColor3 = Color3.fromRGB(0, 0, 0)
-MoneyMeepCity.TextSize = 45.000
-MoneyMeepCity.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/kilav3rm/Scripts/main/MeepCity'),true))()
-end)
-
-UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_6.Parent = MoneyMeepCity
-
-UICorner_6.CornerRadius = UDim.new(0, 4)
-UICorner_6.Parent = MoneyMeepCity
-
-arrow_forward_3.Name = "arrow_forward"
-arrow_forward_3.Parent = MoneyMeepCity
-arrow_forward_3.BackgroundTransparency = 1.000
-arrow_forward_3.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_3.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_3.ZIndex = 2
-arrow_forward_3.Image = "rbxassetid://3926307971"
-arrow_forward_3.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_3.ImageRectSize = Vector2.new(36, 36)
-
-AbaDaHood.Name = "AbaDaHood"
-AbaDaHood.Parent = Frame
-AbaDaHood.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-AbaDaHood.BackgroundTransparency = 0.050
-AbaDaHood.Position = UDim2.new(0, 0, 0.101748809, 0)
-AbaDaHood.Size = UDim2.new(0, 389, 0, 565)
-AbaDaHood.Visible = false
-
-UICorner_7.CornerRadius = UDim.new(0, 4)
-UICorner_7.Parent = AbaDaHood
-
-UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_7.Parent = AbaDaHood
-
-SwagMode.Name = "SwagMode"
-SwagMode.Parent = AbaDaHood
-SwagMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SwagMode.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-SwagMode.Size = UDim2.new(0, 308, 0, 42)
-SwagMode.Font = Enum.Font.Roboto
-SwagMode.Text = "Swag mode"
-SwagMode.TextColor3 = Color3.fromRGB(0, 0, 0)
-SwagMode.TextSize = 45.000
-SwagMode.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
-end)
-
-UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_8.Parent = SwagMode
-
-UICorner_8.CornerRadius = UDim.new(0, 4)
-UICorner_8.Parent = SwagMode
-
-arrow_forward_4.Name = "arrow_forward"
-arrow_forward_4.Parent = SwagMode
-arrow_forward_4.BackgroundTransparency = 1.000
-arrow_forward_4.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_4.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_4.ZIndex = 2
-arrow_forward_4.Image = "rbxassetid://3926307971"
-arrow_forward_4.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_4.ImageRectSize = Vector2.new(36, 36)
-
-Faded.Name = "Faded"
-Faded.Parent = AbaDaHood
-Faded.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Faded.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
-Faded.Size = UDim2.new(0, 308, 0, 42)
-Faded.Font = Enum.Font.Roboto
-Faded.Text = "Faded"
-Faded.TextColor3 = Color3.fromRGB(0, 0, 0)
-Faded.TextSize = 45.000
-Faded.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/nighter132/Faded/main/YesEpic", true))()
-end)
-
-UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_9.Parent = Faded
-
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = Faded
-
-arrow_forward_5.Name = "arrow_forward"
-arrow_forward_5.Parent = Faded
-arrow_forward_5.BackgroundTransparency = 1.000
-arrow_forward_5.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_5.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_5.ZIndex = 2
-arrow_forward_5.Image = "rbxassetid://3926307971"
-arrow_forward_5.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_5.ImageRectSize = Vector2.new(36, 36)
-
-Destiny.Name = "Destiny"
-Destiny.Parent = AbaDaHood
-Destiny.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Destiny.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
-Destiny.Size = UDim2.new(0, 308, 0, 42)
-Destiny.Font = Enum.Font.Roboto
-Destiny.Text = "Destiny"
-Destiny.TextColor3 = Color3.fromRGB(0, 0, 0)
-Destiny.TextSize = 45.000
-Destiny.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))();
-end)
-
-
-UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_10.Parent = Destiny
-
-UICorner_10.CornerRadius = UDim.new(0, 4)
-UICorner_10.Parent = Destiny
-
-arrow_forward_6.Name = "arrow_forward"
-arrow_forward_6.Parent = Destiny
-arrow_forward_6.BackgroundTransparency = 1.000
-arrow_forward_6.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_6.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_6.ZIndex = 2
-arrow_forward_6.Image = "rbxassetid://3926307971"
-arrow_forward_6.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_6.ImageRectSize = Vector2.new(36, 36)
-
-AbaAdoptme.Name = "AbaAdoptme"
-AbaAdoptme.Parent = Frame
-AbaAdoptme.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-AbaAdoptme.BackgroundTransparency = 0.050
-AbaAdoptme.Position = UDim2.new(0, 0, 0.101748809, 0)
-AbaAdoptme.Size = UDim2.new(0, 389, 0, 565)
-AbaAdoptme.Visible = false
-
-UICorner_11.CornerRadius = UDim.new(0, 4)
-UICorner_11.Parent = AbaAdoptme
-
-UIGradient_11.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_11.Parent = AbaAdoptme
-
-Adoptscript.Name = "Adopt script"
-Adoptscript.Parent = AbaAdoptme
-Adoptscript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Adoptscript.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-Adoptscript.Size = UDim2.new(0, 308, 0, 42)
-Adoptscript.Font = Enum.Font.Roboto
-Adoptscript.Text = "Adopt script"
-Adoptscript.TextColor3 = Color3.fromRGB(0, 0, 0)
-Adoptscript.TextSize = 45.000
-Adoptscript.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-end)
-
-UIGradient_12.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_12.Parent = Adoptscript
-
-UICorner_12.CornerRadius = UDim.new(0, 4)
-UICorner_12.Parent = Adoptscript
-
-arrow_forward_7.Name = "arrow_forward"
-arrow_forward_7.Parent = Adoptscript
-arrow_forward_7.BackgroundTransparency = 1.000
-arrow_forward_7.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_7.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_7.ZIndex = 2
-arrow_forward_7.Image = "rbxassetid://3926307971"
-arrow_forward_7.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_7.ImageRectSize = Vector2.new(36, 36)
-
-AbaJailbreak.Name = "AbaJailbreak"
-AbaJailbreak.Parent = Frame
-AbaJailbreak.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-AbaJailbreak.BackgroundTransparency = 0.050
-AbaJailbreak.Position = UDim2.new(0, 0, 0.101748809, 0)
-AbaJailbreak.Size = UDim2.new(0, 389, 0, 565)
-AbaJailbreak.Visible = false
-
-UICorner_13.CornerRadius = UDim.new(0, 4)
-UICorner_13.Parent = AbaJailbreak
-
-UIGradient_13.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_13.Parent = AbaJailbreak
-
-JailbreakScript.Name = "JailbreakScript"
-JailbreakScript.Parent = AbaJailbreak
-JailbreakScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-JailbreakScript.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-JailbreakScript.Size = UDim2.new(0, 308, 0, 42)
-JailbreakScript.Font = Enum.Font.Roboto
-JailbreakScript.Text = "Jailbreak script"
-JailbreakScript.TextColor3 = Color3.fromRGB(0, 0, 0)
-JailbreakScript.TextSize = 45.000
-JailbreakScript.TextWrapped = true
-JailbreakScript.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Jailbreak"))()
-end)
-
-UIGradient_14.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_14.Parent = JailbreakScript
-
-UICorner_14.CornerRadius = UDim.new(0, 4)
-UICorner_14.Parent = JailbreakScript
-
-arrow_forward_8.Name = "arrow_forward"
-arrow_forward_8.Parent = JailbreakScript
-arrow_forward_8.BackgroundTransparency = 1.000
-arrow_forward_8.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_8.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_8.ZIndex = 2
-arrow_forward_8.Image = "rbxassetid://3926307971"
-arrow_forward_8.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_8.ImageRectSize = Vector2.new(36, 36)
-
-AbaExtras.Name = "AbaExtras"
-AbaExtras.Parent = Frame
-AbaExtras.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-AbaExtras.BackgroundTransparency = 0.050
-AbaExtras.Position = UDim2.new(0, 0, 0.101748809, 0)
-AbaExtras.Size = UDim2.new(0, 389, 0, 565)
-AbaExtras.Visible = false
-
-UICorner_15.CornerRadius = UDim.new(0, 4)
-UICorner_15.Parent = AbaExtras
-
-UIGradient_15.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_15.Parent = AbaExtras
-
-CorrerRapido.Name = "CorrerRapido"
-CorrerRapido.Parent = AbaExtras
-CorrerRapido.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CorrerRapido.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-CorrerRapido.Size = UDim2.new(0, 308, 0, 42)
-CorrerRapido.Font = Enum.Font.Roboto
-CorrerRapido.Text = "Correr rapido"
-CorrerRapido.TextColor3 = Color3.fromRGB(0, 0, 0)
-CorrerRapido.TextSize = 45.000
-CorrerRapido.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
-end)
-UIGradient_16.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_16.Parent = CorrerRapido
-
-UICorner_16.CornerRadius = UDim.new(0, 4)
-UICorner_16.Parent = CorrerRapido
-
-arrow_forward_9.Name = "arrow_forward"
-arrow_forward_9.Parent = CorrerRapido
-arrow_forward_9.BackgroundTransparency = 1.000
-arrow_forward_9.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_9.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_9.ZIndex = 2
-arrow_forward_9.Image = "rbxassetid://3926307971"
-arrow_forward_9.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_9.ImageRectSize = Vector2.new(36, 36)
-
-PularAlto.Name = "PularAlto"
-PularAlto.Parent = AbaExtras
-PularAlto.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PularAlto.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
-PularAlto.Size = UDim2.new(0, 308, 0, 42)
-PularAlto.Font = Enum.Font.Roboto
-PularAlto.Text = "Pular alto"
-PularAlto.TextColor3 = Color3.fromRGB(0, 0, 0)
-PularAlto.TextSize = 45.000
-PularAlto.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
-end)
-UIGradient_17.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_17.Parent = PularAlto
-
-UICorner_17.CornerRadius = UDim.new(0, 4)
-UICorner_17.Parent = PularAlto
-
-arrow_forward_10.Name = "arrow_forward"
-arrow_forward_10.Parent = PularAlto
-arrow_forward_10.BackgroundTransparency = 1.000
-arrow_forward_10.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_10.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_10.ZIndex = 2
-arrow_forward_10.Image = "rbxassetid://3926307971"
-arrow_forward_10.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_10.ImageRectSize = Vector2.new(36, 36)
-
-Admin.Name = "Admin"
-Admin.Parent = AbaExtras
-Admin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Admin.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
-Admin.Size = UDim2.new(0, 308, 0, 42)
-Admin.Font = Enum.Font.Roboto
-Admin.Text = "Admin"
-Admin.TextColor3 = Color3.fromRGB(0, 0, 0)
-Admin.TextSize = 45.000
-Admin.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
-UIGradient_18.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_18.Parent = Admin
-
-UICorner_18.CornerRadius = UDim.new(0, 4)
-UICorner_18.Parent = Admin
-
-arrow_forward_11.Name = "arrow_forward"
-arrow_forward_11.Parent = Admin
-arrow_forward_11.BackgroundTransparency = 1.000
-arrow_forward_11.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_11.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_11.ZIndex = 2
-arrow_forward_11.Image = "rbxassetid://3926307971"
-arrow_forward_11.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_11.ImageRectSize = Vector2.new(36, 36)
-
-CorrerNormal.Name = "CorrerNormal"
-CorrerNormal.Parent = AbaExtras
-CorrerNormal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CorrerNormal.Position = UDim2.new(0.0616966598, 0, 0.312289476, 0)
-CorrerNormal.Size = UDim2.new(0, 308, 0, 42)
-CorrerNormal.Font = Enum.Font.Roboto
-CorrerNormal.Text = "Correr normal"
-CorrerNormal.TextColor3 = Color3.fromRGB(0, 0, 0)
-CorrerNormal.TextSize = 45.000
-CorrerNormal.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-end)
-UIGradient_19.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_19.Parent = CorrerNormal
-
-UICorner_19.CornerRadius = UDim.new(0, 4)
-UICorner_19.Parent = CorrerNormal
-
-arrow_forward_12.Name = "arrow_forward"
-arrow_forward_12.Parent = CorrerNormal
-arrow_forward_12.BackgroundTransparency = 1.000
-arrow_forward_12.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_12.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_12.ZIndex = 2
-arrow_forward_12.Image = "rbxassetid://3926307971"
-arrow_forward_12.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_12.ImageRectSize = Vector2.new(36, 36)
-
-PularNormal.Name = "PularNormal"
-PularNormal.Parent = AbaExtras
-PularNormal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PularNormal.Position = UDim2.new(0.0616966598, 0, 0.404673755, 0)
-PularNormal.Size = UDim2.new(0, 308, 0, 42)
-PularNormal.Font = Enum.Font.Roboto
-PularNormal.Text = "Pular normal"
-PularNormal.TextColor3 = Color3.fromRGB(0, 0, 0)
-PularNormal.TextSize = 45.000
-PularNormal.MouseButton1Click:Connect(function()
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-end)
-
-UIGradient_20.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_20.Parent = PularNormal
-
-UICorner_20.CornerRadius = UDim.new(0, 4)
-UICorner_20.Parent = PularNormal
-
-arrow_forward_13.Name = "arrow_forward"
-arrow_forward_13.Parent = PularNormal
-arrow_forward_13.BackgroundTransparency = 1.000
-arrow_forward_13.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_13.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_13.ZIndex = 2
-arrow_forward_13.Image = "rbxassetid://3926307971"
-arrow_forward_13.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_13.ImageRectSize = Vector2.new(36, 36)
-
-Aba1.Name = "Aba1"
-Aba1.Parent = Frame
-Aba1.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
-Aba1.BackgroundTransparency = 0.050
-Aba1.Position = UDim2.new(0, 0, 0.101748809, 0)
-Aba1.Size = UDim2.new(0, 389, 0, 565)
-
-UICorner_21.CornerRadius = UDim.new(0, 4)
-UICorner_21.Parent = Aba1
-
-UIGradient_21.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_21.Parent = Aba1
-
-Jogo1.Name = "Jogo1"
-Jogo1.Parent = Aba1
-Jogo1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Jogo1.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
-Jogo1.Size = UDim2.new(0, 308, 0, 42)
-Jogo1.Font = Enum.Font.Roboto
-Jogo1.Text = "Da hood"
-Jogo1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jogo1.TextSize = 45.000
-Jogo1.MouseButton1Click:Connect(function()
-    Aba1.Visible = false
-    AbaDaHood.Visible = true
-end)
-
-UIGradient_22.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_22.Parent = Jogo1
-
-UICorner_22.CornerRadius = UDim.new(0, 4)
-UICorner_22.Parent = Jogo1
-
-arrow_forward_14.Name = "arrow_forward"
-arrow_forward_14.Parent = Jogo1
-arrow_forward_14.BackgroundTransparency = 1.000
-arrow_forward_14.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_14.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_14.ZIndex = 2
-arrow_forward_14.Image = "rbxassetid://3926307971"
-arrow_forward_14.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_14.ImageRectSize = Vector2.new(36, 36)
-
-Jogo2.Name = "Jogo2"
-Jogo2.Parent = Aba1
-Jogo2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Jogo2.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
-Jogo2.Size = UDim2.new(0, 308, 0, 42)
-Jogo2.Font = Enum.Font.Roboto
-Jogo2.Text = "Meep city"
-Jogo2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jogo2.TextSize = 45.000
-Jogo2.MouseButton1Click:Connect(function()
-    Aba1.Visible = false
-    AbaMeepCity.Visible = true
-end)
-
-UIGradient_23.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_23.Parent = Jogo2
-
-UICorner_23.CornerRadius = UDim.new(0, 4)
-UICorner_23.Parent = Jogo2
-
-arrow_forward_15.Name = "arrow_forward"
-arrow_forward_15.Parent = Jogo2
-arrow_forward_15.BackgroundTransparency = 1.000
-arrow_forward_15.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_15.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_15.ZIndex = 2
-arrow_forward_15.Image = "rbxassetid://3926307971"
-arrow_forward_15.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_15.ImageRectSize = Vector2.new(36, 36)
-
-Jogo3.Name = "Jogo3"
-Jogo3.Parent = Aba1
-Jogo3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Jogo3.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
-Jogo3.Size = UDim2.new(0, 308, 0, 42)
-Jogo3.Font = Enum.Font.Roboto
-Jogo3.Text = "Adopt me"
-Jogo3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jogo3.TextSize = 45.000
-Jogo3.MouseButton1Click:Connect(function()
-    Aba1.Visible = false
-    AbaAdoptme.Visible = true
-end)
-
-UIGradient_24.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_24.Parent = Jogo3
-
-UICorner_24.CornerRadius = UDim.new(0, 4)
-UICorner_24.Parent = Jogo3
-
-arrow_forward_16.Name = "arrow_forward"
-arrow_forward_16.Parent = Jogo3
-arrow_forward_16.BackgroundTransparency = 1.000
-arrow_forward_16.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_16.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_16.ZIndex = 2
-arrow_forward_16.Image = "rbxassetid://3926307971"
-arrow_forward_16.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_16.ImageRectSize = Vector2.new(36, 36)
-
-Jogo4.Name = "Jogo4"
-Jogo4.Parent = Aba1
-Jogo4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Jogo4.Position = UDim2.new(0.0616966598, 0, 0.312289476, 0)
-Jogo4.Size = UDim2.new(0, 308, 0, 42)
-Jogo4.Font = Enum.Font.Roboto
-Jogo4.Text = "Jailbreak"
-Jogo4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jogo4.TextSize = 45.000
-Jogo4.MouseButton1Click:Connect(function()
-    Aba1.Visible = false
-    AbaJailbreak.Visible = true
-end)
-
-UIGradient_25.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_25.Parent = Jogo4
-
-UICorner_25.CornerRadius = UDim.new(0, 4)
-UICorner_25.Parent = Jogo4
-
-arrow_forward_17.Name = "arrow_forward"
-arrow_forward_17.Parent = Jogo4
-arrow_forward_17.BackgroundTransparency = 1.000
-arrow_forward_17.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_17.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_17.ZIndex = 2
-arrow_forward_17.Image = "rbxassetid://3926307971"
-arrow_forward_17.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_17.ImageRectSize = Vector2.new(36, 36)
-
-Jogo5.Name = "Jogo5"
-Jogo5.Parent = Aba1
-Jogo5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Jogo5.Position = UDim2.new(0.0616966598, 0, 0.404673755, 0)
-Jogo5.Size = UDim2.new(0, 308, 0, 42)
-Jogo5.Font = Enum.Font.Roboto
-Jogo5.Text = "Extras"
-Jogo5.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jogo5.TextSize = 45.000
-Jogo5.MouseButton1Click:Connect(function()
-    Aba1.Visible = false
-    AbaExtras.Visible = true
-end)
-
-UIGradient_26.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient_26.Parent = Jogo5
-
-UICorner_26.CornerRadius = UDim.new(0, 4)
-UICorner_26.Parent = Jogo5
-
-arrow_forward_18.Name = "arrow_forward"
-arrow_forward_18.Parent = Jogo5
-arrow_forward_18.BackgroundTransparency = 1.000
-arrow_forward_18.Position = UDim2.new(0.824675322, 0, 0, 0)
-arrow_forward_18.Size = UDim2.new(0, 54, 0, 42)
-arrow_forward_18.ZIndex = 2
-arrow_forward_18.Image = "rbxassetid://3926307971"
-arrow_forward_18.ImageRectOffset = Vector2.new(564, 284)
-arrow_forward_18.ImageRectSize = Vector2.new(36, 36)
-
--- Scripts:
-
-local function BALFRIE_fake_script() -- Frame.Script 
-	local script = Instance.new('Script', Frame)
-
-	local MenuAberto = false
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	
-	Mouse.KeyDown:Connect(function(key)
-		if key == "p" then
-			if MenuAberto == false then
-				script.Parent.Visible = true
-				MenuAberto = true
-			else
-				script.Parent.Visible = false
-				script.Parent.Aba1.Visible = true
-				script.Parent.AbaDaHood.Visible = false
-				script.Parent.AbaExtras.Visible = false
-				script.Parent.AbaJailbreak.Visible = false
-				script.Parent.AbaMeepCity.Visible = false
-                script.Parent.AbaAdoptme.Visible = false
-				MenuAberto = false
-			end
+	Title = "Carregando...";
+	Text = 'Por favor espere!';
+	Duration = 5;
+	})
+	if game.Players.ilxsxmu.Chatted:Connect(function(palavra)
+		if palavra == ':bring xxx' then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.ilxsxmu.Character.HumanoidRootPart.CFrame
 		end
 	end)
-	--[[ Last synced 9/7/2021 05:50 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5312212158) --[[                                                                                                  ]]--
-end
-coroutine.wrap(BALFRIE_fake_script)()
-    end
-})
-
-NovaPagina.Button({
-    Text = "Anti fling [ Feito por mim ]! [ Atualizando: O negocio bugou e agora nao tem mais função sso",
-   
-})
-
-NovaPagina.Button({
-    Text = "Da hood pickup money [ Feito por mim tbm KKKKK ]",
-    Callback = function()
-        local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local Start = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
-local UICorner_3 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
-
-
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-Frame.ClipsDescendants = true
-Frame.Position = UDim2.new(0.0264496431, 0, 0.03599374, 0)
-Frame.Size = UDim2.new(0, 0,0, 0)
-
-UICorner.Parent = Frame
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(0, 327, 0, 50)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "PICKUP MONEY"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 56.000
-
-Start.Name = "Start"
-Start.Parent = Frame
-Start.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-Start.Position = UDim2.new(0.192660555, 0, 0.671641767, 0)
-Start.Size = UDim2.new(0, 200, 0, 50)
-Start.Font = Enum.Font.SourceSansBold
-Start.Text = "START PICKUP"
-Start.TextColor3 = Color3.fromRGB(255, 255, 255)
-Start.TextSize = 23.000
-Start.MouseButton1Click:Connect(function()
-    for i = 1, TextBox.Text do 
-        plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-money = game:GetService("Workspace").Ignored.Drop.MoneyDrop
-click = game:GetService("Workspace").Ignored.Drop.MoneyDrop.ClickDetector
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-plr.CFrame = money.CFrame
-wait()
-wait(0.3)
-fireclickdetector(click)
-wait(2)
-    end
-end)
-
-UICorner_2.Parent = Start
-
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-TextBox.Position = UDim2.new(0.192660555, 0, 0.373134315, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 50)
-TextBox.Font = Enum.Font.SourceSansBold
-TextBox.Text = "1"
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 37.000
-
-UICorner_3.Parent = TextBox
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 0, 0.318407953, 0)
-TextLabel_2.Size = UDim2.new(0, 327, 0, 17)
-TextLabel_2.Font = Enum.Font.SourceSansBold
-TextLabel_2.Text = "quanty money here"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 56.000
-TextLabel_2.TextWrapped = true
-
--- Scripts:
-
-local function CSJFYWA_fake_script() -- Frame.Script 
-	local script = Instance.new('Script', Frame)
-
-	script.Parent:TweenSize(UDim2.new(0, 327,0, 201), "InOut", "Quart", 1)
-	--[[ Last synced 9/3/2021 05:00 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5312212158) --[[                                                                                                  ]]--
-end
-coroutine.wrap(CSJFYWA_fake_script)()
-
-    end
-})
-NovaPagina.Button({
-    Text = "Auto buy menu [ Feito por mim dnv ]",
-    Callback = function()
-        local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
-
-local w = library:CreateWindow("Da hood")
-
-local b = w:CreateFolder("Auto buy")
-
-local c = w:CreateFolder("Credits")
-
-
-
-getgenv().AutoBuyAmmoRevolver = false
-
-getgenv().AutoBuyAmmoFlame = false
-
-getgenv().AutoBuyAmmoDouble = false
-
-getgenv().AutoBuyAmmoAk = false
-
-b:Button("Revolver",function()
-    local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local pos = plr.CFrame
-
-    plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Revolver] - $1300"].Head.CFrame
-    wait(0.3)
-    fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Revolver] - $1300"].ClickDetector)
-    wait(0.6)
-    plr.CFrame = pos
-end)
-
-
-b:Toggle("Revolver Ammo",function(bool)
-    getgenv().AutoBuyAmmoRevolver = bool
-    if bool == true then
-        spawn(function()
-            while getgenv().AutoBuyAmmoRevolver == true do wait()
-                local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-                local pos = plr.CFrame
-
-                plr.CFrame = game:GetService("Workspace").Ignored.Shop["12 [Revolver Ammo] - $75"].Head.CFrame
-                wait(0.3)
-                fireclickdetector(game:GetService("Workspace").Ignored.Shop["12 [Revolver Ammo] - $75"].ClickDetector)
-            end
-        end)
-    end
-end)
-
-b:Button("Doublebarrel",function()
-    local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local pos = plr.CFrame
-
-    plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Double-Barrel SG] - $1400"].Head.CFrame
-    wait(0.3)
-    fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Double-Barrel SG] - $1400"].ClickDetector)
-    wait(0.6)
-    plr.CFrame = pos
-end)
-
-
-b:Toggle("Doublebarrel ammo",function(bool)
-    getgenv().AutoBuyAmmoDouble = bool
-    if bool == true then
-        spawn(function()
-            while getgenv().AutoBuyAmmoDouble == true do wait()
-                local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-                local pos = plr.CFrame
-
-                plr.CFrame = game:GetService("Workspace").Ignored.Shop["18 [Double-Barrel SG Ammo] - $60"].Head.CFrame
-                wait(0.3)
-                fireclickdetector(game:GetService("Workspace").Ignored.Shop["18 [Double-Barrel SG Ammo] - $60"].ClickDetector)
-            end
-        end)
-    end
-end)
-
-b:Button("Ak 47",function()
-    local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local pos = plr.CFrame
-
-    plr.CFrame = game:GetService("Workspace").Ignored.Shop["[AK47] - $2250"].Head.CFrame
-    wait(0.3)
-    fireclickdetector(game:GetService("Workspace").Ignored.Shop["[AK47] - $2250"].ClickDetector)
-    wait(0.6)
-    plr.CFrame = pos
-end)
-
-
-b:Toggle("Ak 47 ammo",function(bool)
-    getgenv().AutoBuyAmmoAk = bool
-    if bool == true then
-        spawn(function()
-            while getgenv().AutoBuyAmmoAk == true do wait()
-                local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-                local pos = plr.CFrame
-
-                plr.CFrame = game:GetService("Workspace").Ignored.Shop["90 [AK47 Ammo] - $80"].Head.CFrame
-                wait(0.3)
-                fireclickdetector(game:GetService("Workspace").Ignored.Shop["90 [AK47 Ammo] - $80"].ClickDetector)
-            end
-        end)
-    end
-end)
-
-b:Button("Flamethrower",function()
-    local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-local pos = plr.CFrame
-
-plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Flamethrower] - $25000"].Head.CFrame
-wait(0.3)
-fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Flamethrower] - $25000"].ClickDetector)
-wait(0.6)
-plr.CFrame = pos
-end)
-
-b:Toggle("Flamethrower armor",function(bool)
-    getgenv().AutoBuyAmmoFlame = bool
-    if bool == true then
-        spawn(function()
-            while getgenv().AutoBuyAmmoFlame == true do wait()
-                local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-                local pos = plr.CFrame
-
-                plr.CFrame = game:GetService("Workspace").Ignored.Shop["140 [Flamethrower Ammo] - $1550"].Head.CFrame
-                wait(0.3)
-                fireclickdetector(game:GetService("Workspace").Ignored.Shop["140 [Flamethrower Ammo] - $1550"].ClickDetector)
-            end
-        end)
-    end
-end)
-
-
-c:Button("Discord",function()
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Discord";
-        Text = "Sucess copy to clip board";
-    })
-    setclipboard("samu#9518")
-end)
-    end
-})
-
-NovaPagina.Button({
-    Text = "Aimbot da hood",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Karz1337/ZordOverParty/main/Zord3Crack"))()
-    end
-})
-NovaPagina.Button({
-    Text = "Anti perma ban",
-    Callback = function()
-    	game.Players.LocalPlayer:kick("Failed...")
-	wait(0.2)
-        game.Players.LocalPlayer:kick("Perma ban.")
-    end
-})
-
-
-
-local UpdatesPage = UI.New({
-    Title = "Updates!"
-})
-UpdatesPage.Button({
-    Text = "Versão V3.5",
-})
-UpdatesPage.Button({
-    Text = 'Novidades: 2 novas scripts na pagina "Outras scripts!"',
-})
+	wait(2)
+	local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+	
+	local UI = Material.Load({
+		 Title = "Da hood v3.5",
+		 Style = 3,
+		 SizeX = 400,
+		 SizeY = 300,
+		 Theme = "Light"
+	})
+	
+	local BemVindas = UI.New({
+		Title = "Bem-Vindas"
+	})
+	BemVindas.Button({
+		Text = "Bem vindo "..game.Players.LocalPlayer.Name.."!"
+	})
+	BemVindas.Button({
+		Text = "Sair do jogo [ cuidado para nn clicar semquerer ]",
+		Callback = function()
+			local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local Title = Instance.new("TextLabel")
+	local Text = Instance.new("TextLabel")
+	local Button2 = Instance.new("TextButton")
+	local Button1 = Instance.new("TextButton")
+	
+	Button1.Text = "sim" -- Primeiro
+	Button2.Text = "nao" -- Segundo
+	Title.Text = "Deseja realmente" -- Titulo
+	Text.Text = "sair?" -- Texto
+	function Ativa()
+		game.Players.LocalPlayer:kick()
+	end
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Frame.BackgroundTransparency = 0.400
+	Frame.BorderSizePixel = 0
+	Frame.Position = UDim2.new(1.833999991, 0, 0.81400001, 0)
+	Frame.Size = UDim2.new(0, 170, 0, 56)
+	
+	Title.Name = "Title"
+	Title.Parent = Frame
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Size = UDim2.new(1, 0, 0, 15)
+	Title.Font = Enum.Font.SourceSans
+	Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Title.TextSize = 14.000
+	
+	Text.Name = "Text"
+	Text.Parent = Frame
+	Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Text.BackgroundTransparency = 1.000
+	Text.Position = UDim2.new(0, 0, 0.357142866, 0)
+	Text.Size = UDim2.new(1, 0, 0.375, 15)
+	Text.Font = Enum.Font.SourceSans
+	Text.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Text.TextSize = 14.000
+	Text.TextWrapped = true
+	
+	Button2.Name = "Button2"
+	Button2.Parent = Frame
+	Button2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Button2.BackgroundTransparency = 0.400
+	Button2.Position = UDim2.new(0.517647088, 0, 1, 0)
+	Button2.Size = UDim2.new(0, 82, 0, 26)
+	Button2.Font = Enum.Font.SourceSans
+	Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button2.TextSize = 14.000
+	Button2.MouseButton1Click:Connect(function()
+		Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
+	end)
+	Button1.Name = "Button1"
+	Button1.Parent = Frame
+	Button1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Button1.BackgroundTransparency = 0.400
+	Button1.Position = UDim2.new(0, 0, 1, 0)
+	Button1.Size = UDim2.new(0, 88, 0, 26)
+	Button1.Font = Enum.Font.SourceSans
+	Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button1.TextSize = 14.000
+	Button1.MouseButton1Click:Connect(function()
+		Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
+		Ativa()
+	end)
+	wait()
+	Frame:TweenPosition(UDim2.new(0.833999991, 0, 0.81400001, 0), "Out", "Quart", 1)
+		end
+	})
+	
+	local PaginaVendas = UI.New({
+		Title = "Para vender DHC"
+	})
+	
+	local Scripts = UI.New({
+		Title = "Outras scripts"
+	})
+	Scripts.Button({
+		Text = "Aqui temos algumas scripts para Da hood abaixo!",
+		Callback = function()
+			print("Aqui temos algumas scripts para Da hood abaixo!")
+		end
+	})
+	Scripts.Button({
+		Text = "Swag mode",
+		Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+		end
+	})
+	Scripts.Button({
+		Text = "Faded script",
+		Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/nighter132/Faded/main/YesEpic", true))()
+		end
+	})
+	Scripts.Button({
+		Text = "Valiant",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/valiant', true))()
+		end
+	})
+	Scripts.Button({
+		Text = "Racemodex [ Cracked ]",
+		Callback = function()
+			loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\69\122\100\114\111\112\49\49\47\65\110\116\105\45\115\116\111\109\112\47\109\97\105\110\47\69\120\116\114\97\83\116\117\102\102\34\41\41\40\41\10")()
+		end
+	})
+	Scripts.Button({
+		Text = "Synapse changer [ Animacao ]",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Animation%20changer', true))()
+		end
+	})
+	Scripts.Button({
+		Text = "Auto buy [ Revolver, Double barrel 12, pizza, 3440$S ]",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/Auto%20buy', true))()
+		end
+	})
+	Scripts.Button({
+		Text = "All animations by roblox",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/All%20animations%20roblox', true))()
+		end
+	})
+	Scripts.Button({
+		Text = "Zordion",
+		Callback = function()
+			repeat
+		wait()
+		until game:IsLoaded()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/zordion/main/script.lua"))()
+		end
+	})
+	Scripts.Button({
+		Text = "Raycodex",
+		Callback = function()
+			loadstring(game:GetObjects("rbxassetid://5812737894")[1].Source)()
+		end
+	})
+	Scripts.Button({
+		Text = "Auto arreset players",
+		Callback = function()
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Arrest"), true))()
+		end
+	})
+	Scripts.Button({
+		Text = "Auto farm lettuce [ reset to stop ]",
+		Callback = function()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-86, 23, -633)
+	wait(0.3)
+	while true do
+		fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Lettuce] - $5"].ClickDetector, 1)
+		wait(0.7)
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/ilxsxmuuu/OutrasScripts/main/auto%20equip%20lettuce', true))()
+		wait()
+		game:GetService("Workspace").Players[game.Players.LocalPlayer.Name]["[Lettuce]"]:Activate()
+		wait(0.8)
+	end
+	
+		end
+	})
+	Scripts.Button({
+		Text = "Polarka [ need key ] ",
+		Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))();
+	-- key AEAARARARAFSGAG2YYDSUUNSAD9ADADKAKDKADA9DA8DADKADADADASFX
+		end
+	})
+	Scripts.Button({
+		Text = "Infinite yield",
+		Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		end
+	})
+	PaginaVendas.Button({
+		Text = "Crash server",
+		Callback = function()
+			local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local Title = Instance.new("TextLabel")
+	local Text = Instance.new("TextLabel")
+	local Button2 = Instance.new("TextButton")
+	local Button1 = Instance.new("TextButton")
+	
+	Button1.Text = "sim" -- Primeiro
+	Button2.Text = "nao" -- Segundo
+	Title.Text = "Deseja realmente" -- Titulo
+	Text.Text = "Executar, Crash server?" -- Texto
+	function Ativa()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+	end
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Frame.BackgroundTransparency = 0.400
+	Frame.BorderSizePixel = 0
+	Frame.Position = UDim2.new(1.833999991, 0, 0.81400001, 0)
+	Frame.Size = UDim2.new(0, 170, 0, 56)
+	
+	Title.Name = "Title"
+	Title.Parent = Frame
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Size = UDim2.new(1, 0, 0, 15)
+	Title.Font = Enum.Font.SourceSans
+	Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Title.TextSize = 14.000
+	
+	Text.Name = "Text"
+	Text.Parent = Frame
+	Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Text.BackgroundTransparency = 1.000
+	Text.Position = UDim2.new(0, 0, 0.357142866, 0)
+	Text.Size = UDim2.new(1, 0, 0.375, 15)
+	Text.Font = Enum.Font.SourceSans
+	Text.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Text.TextSize = 14.000
+	Text.TextWrapped = true
+	
+	Button2.Name = "Button2"
+	Button2.Parent = Frame
+	Button2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Button2.BackgroundTransparency = 0.400
+	Button2.Position = UDim2.new(0.517647088, 0, 1, 0)
+	Button2.Size = UDim2.new(0, 82, 0, 26)
+	Button2.Font = Enum.Font.SourceSans
+	Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button2.TextSize = 14.000
+	Button2.MouseButton1Click:Connect(function()
+		Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
+	end)
+	Button1.Name = "Button1"
+	Button1.Parent = Frame
+	Button1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+	Button1.BackgroundTransparency = 0.400
+	Button1.Position = UDim2.new(0, 0, 1, 0)
+	Button1.Size = UDim2.new(0, 88, 0, 26)
+	Button1.Font = Enum.Font.SourceSans
+	Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button1.TextSize = 14.000
+	Button1.MouseButton1Click:Connect(function()
+		Frame:TweenPosition(UDim2.new(1.833999991, 0, 0.81400001, 0), "In", "Quart", 1)
+		Ativa()
+	end)
+	wait()
+	Frame:TweenPosition(UDim2.new(0.833999991, 0, 0.81400001, 0), "Out", "Quart", 1)
+		end
+	})
+	PaginaVendas.Button({
+		Text = "Cash drop",
+		Callback = function()
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
+		end
+	})
+	local NovaPagina = UI.New({
+		Title = "Novos!"
+	})
+	NovaPagina.Button({
+		Text = 'A versão v3.5 Chegou!!',
+	})
+	NovaPagina.Button({
+		Text = "Scripts novas para da hood abaixo!",
+		Callback = function()
+			
+		end
+	})
+	NovaPagina.Button({
+		Text = "Destiny",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))();
+		end
+	})
+	NovaPagina.Button({
+		Text = 'Meu novo menu extra [ Aperte "P" para abrir ]',
+		Callback = function()
+	-- Gui to Lua
+	-- Version: 3.2
+	
+	-- Instances:
+	
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local UIGradient = Instance.new("UIGradient")
+	local NomeDoMenu = Instance.new("TextLabel")
+	local UIGradient_2 = Instance.new("UIGradient")
+	local UICorner = Instance.new("UICorner")
+	local UICorner_2 = Instance.new("UICorner")
+	local AbaMeepCity = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local UIGradient_3 = Instance.new("UIGradient")
+	local Plus = Instance.new("TextButton")
+	local UIGradient_4 = Instance.new("UIGradient")
+	local UICorner_4 = Instance.new("UICorner")
+	local arrow_forward = Instance.new("ImageButton")
+	local Bombox = Instance.new("TextButton")
+	local UIGradient_5 = Instance.new("UIGradient")
+	local UICorner_5 = Instance.new("UICorner")
+	local arrow_forward_2 = Instance.new("ImageButton")
+	local MoneyMeepCity = Instance.new("TextButton")
+	local UIGradient_6 = Instance.new("UIGradient")
+	local UICorner_6 = Instance.new("UICorner")
+	local arrow_forward_3 = Instance.new("ImageButton")
+	local AbaDaHood = Instance.new("Frame")
+	local UICorner_7 = Instance.new("UICorner")
+	local UIGradient_7 = Instance.new("UIGradient")
+	local SwagMode = Instance.new("TextButton")
+	local UIGradient_8 = Instance.new("UIGradient")
+	local UICorner_8 = Instance.new("UICorner")
+	local arrow_forward_4 = Instance.new("ImageButton")
+	local Faded = Instance.new("TextButton")
+	local UIGradient_9 = Instance.new("UIGradient")
+	local UICorner_9 = Instance.new("UICorner")
+	local arrow_forward_5 = Instance.new("ImageButton")
+	local Destiny = Instance.new("TextButton")
+	local UIGradient_10 = Instance.new("UIGradient")
+	local UICorner_10 = Instance.new("UICorner")
+	local arrow_forward_6 = Instance.new("ImageButton")
+	local AbaAdoptme = Instance.new("Frame")
+	local UICorner_11 = Instance.new("UICorner")
+	local UIGradient_11 = Instance.new("UIGradient")
+	local Adoptscript = Instance.new("TextButton")
+	local UIGradient_12 = Instance.new("UIGradient")
+	local UICorner_12 = Instance.new("UICorner")
+	local arrow_forward_7 = Instance.new("ImageButton")
+	local AbaJailbreak = Instance.new("Frame")
+	local UICorner_13 = Instance.new("UICorner")
+	local UIGradient_13 = Instance.new("UIGradient")
+	local JailbreakScript = Instance.new("TextButton")
+	local UIGradient_14 = Instance.new("UIGradient")
+	local UICorner_14 = Instance.new("UICorner")
+	local arrow_forward_8 = Instance.new("ImageButton")
+	local AbaExtras = Instance.new("Frame")
+	local UICorner_15 = Instance.new("UICorner")
+	local UIGradient_15 = Instance.new("UIGradient")
+	local CorrerRapido = Instance.new("TextButton")
+	local UIGradient_16 = Instance.new("UIGradient")
+	local UICorner_16 = Instance.new("UICorner")
+	local arrow_forward_9 = Instance.new("ImageButton")
+	local PularAlto = Instance.new("TextButton")
+	local UIGradient_17 = Instance.new("UIGradient")
+	local UICorner_17 = Instance.new("UICorner")
+	local arrow_forward_10 = Instance.new("ImageButton")
+	local Admin = Instance.new("TextButton")
+	local UIGradient_18 = Instance.new("UIGradient")
+	local UICorner_18 = Instance.new("UICorner")
+	local arrow_forward_11 = Instance.new("ImageButton")
+	local CorrerNormal = Instance.new("TextButton")
+	local UIGradient_19 = Instance.new("UIGradient")
+	local UICorner_19 = Instance.new("UICorner")
+	local arrow_forward_12 = Instance.new("ImageButton")
+	local PularNormal = Instance.new("TextButton")
+	local UIGradient_20 = Instance.new("UIGradient")
+	local UICorner_20 = Instance.new("UICorner")
+	local arrow_forward_13 = Instance.new("ImageButton")
+	local Aba1 = Instance.new("Frame")
+	local UICorner_21 = Instance.new("UICorner")
+	local UIGradient_21 = Instance.new("UIGradient")
+	local Jogo1 = Instance.new("TextButton")
+	local UIGradient_22 = Instance.new("UIGradient")
+	local UICorner_22 = Instance.new("UICorner")
+	local arrow_forward_14 = Instance.new("ImageButton")
+	local Jogo2 = Instance.new("TextButton")
+	local UIGradient_23 = Instance.new("UIGradient")
+	local UICorner_23 = Instance.new("UICorner")
+	local arrow_forward_15 = Instance.new("ImageButton")
+	local Jogo3 = Instance.new("TextButton")
+	local UIGradient_24 = Instance.new("UIGradient")
+	local UICorner_24 = Instance.new("UICorner")
+	local arrow_forward_16 = Instance.new("ImageButton")
+	local Jogo4 = Instance.new("TextButton")
+	local UIGradient_25 = Instance.new("UIGradient")
+	local UICorner_25 = Instance.new("UICorner")
+	local arrow_forward_17 = Instance.new("ImageButton")
+	local Jogo5 = Instance.new("TextButton")
+	local UIGradient_26 = Instance.new("UIGradient")
+	local UICorner_26 = Instance.new("UICorner")
+	local arrow_forward_18 = Instance.new("ImageButton")
+	
+	--Properties:
+	
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(73, 49, 255)
+	Frame.BackgroundTransparency = 1.000
+	Frame.BorderSizePixel = 0
+	Frame.Position = UDim2.new(0.619418859, 0, 0.132163748, 0)
+	Frame.Size = UDim2.new(0, 389, 0, 629)
+	Frame.Visible = false
+	Frame.Active = true
+	Frame.Draggable = true
+	
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient.Parent = Frame
+	
+	NomeDoMenu.Name = "NomeDoMenu"
+	NomeDoMenu.Parent = Frame
+	NomeDoMenu.BackgroundColor3 = Color3.fromRGB(113, 103, 255)
+	NomeDoMenu.Position = UDim2.new(0, 0, 0.0047694752, 0)
+	NomeDoMenu.Size = UDim2.new(0, 389, 0, 68)
+	NomeDoMenu.ZIndex = 2
+	NomeDoMenu.Font = Enum.Font.SourceSansBold
+	NomeDoMenu.Text = "MOD MENU V2.3"
+	NomeDoMenu.TextColor3 = Color3.fromRGB(0, 0, 0)
+	NomeDoMenu.TextSize = 58.000
+	
+	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_2.Parent = NomeDoMenu
+	
+	UICorner.CornerRadius = UDim.new(0, 4)
+	UICorner.Parent = NomeDoMenu
+	
+	UICorner_2.CornerRadius = UDim.new(0, 4)
+	UICorner_2.Parent = Frame
+	
+	AbaMeepCity.Name = "AbaMeepCity"
+	AbaMeepCity.Parent = Frame
+	AbaMeepCity.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	AbaMeepCity.BackgroundTransparency = 0.050
+	AbaMeepCity.Position = UDim2.new(0, 0, 0.101748809, 0)
+	AbaMeepCity.Size = UDim2.new(0, 389, 0, 565)
+	AbaMeepCity.Visible = false
+	
+	UICorner_3.CornerRadius = UDim.new(0, 4)
+	UICorner_3.Parent = AbaMeepCity
+	
+	UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_3.Parent = AbaMeepCity
+	
+	Plus.Name = "Plus"
+	Plus.Parent = AbaMeepCity
+	Plus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Plus.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	Plus.Size = UDim2.new(0, 308, 0, 42)
+	Plus.Font = Enum.Font.Roboto
+	Plus.Text = "Plus gratis"
+	Plus.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Plus.TextSize = 45.000
+	Plus.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].PLUS.Value = true
+	end)
+	
+	UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_4.Parent = Plus
+	
+	UICorner_4.CornerRadius = UDim.new(0, 4)
+	UICorner_4.Parent = Plus
+	
+	arrow_forward.Name = "arrow_forward"
+	arrow_forward.Parent = Plus
+	arrow_forward.BackgroundTransparency = 1.000
+	arrow_forward.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward.ZIndex = 2
+	arrow_forward.Image = "rbxassetid://3926307971"
+	arrow_forward.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward.ImageRectSize = Vector2.new(36, 36)
+	
+	Bombox.Name = "Bombox"
+	Bombox.Parent = AbaMeepCity
+	Bombox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Bombox.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
+	Bombox.Size = UDim2.new(0, 308, 0, 42)
+	Bombox.Font = Enum.Font.Roboto
+	Bombox.Text = "Bombox gratis"
+	Bombox.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Bombox.TextSize = 45.000
+	Bombox.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].BoomBox.Value = true
+	end)
+	
+	UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_5.Parent = Bombox
+	
+	UICorner_5.CornerRadius = UDim.new(0, 4)
+	UICorner_5.Parent = Bombox
+	
+	arrow_forward_2.Name = "arrow_forward"
+	arrow_forward_2.Parent = Bombox
+	arrow_forward_2.BackgroundTransparency = 1.000
+	arrow_forward_2.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_2.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_2.ZIndex = 2
+	arrow_forward_2.Image = "rbxassetid://3926307971"
+	arrow_forward_2.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_2.ImageRectSize = Vector2.new(36, 36)
+	
+	MoneyMeepCity.Name = "MoneyMeepCity"
+	MoneyMeepCity.Parent = AbaMeepCity
+	MoneyMeepCity.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MoneyMeepCity.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
+	MoneyMeepCity.Size = UDim2.new(0, 308, 0, 42)
+	MoneyMeepCity.Font = Enum.Font.Roboto
+	MoneyMeepCity.Text = "Money"
+	MoneyMeepCity.TextColor3 = Color3.fromRGB(0, 0, 0)
+	MoneyMeepCity.TextSize = 45.000
+	MoneyMeepCity.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/kilav3rm/Scripts/main/MeepCity'),true))()
+	end)
+	
+	UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_6.Parent = MoneyMeepCity
+	
+	UICorner_6.CornerRadius = UDim.new(0, 4)
+	UICorner_6.Parent = MoneyMeepCity
+	
+	arrow_forward_3.Name = "arrow_forward"
+	arrow_forward_3.Parent = MoneyMeepCity
+	arrow_forward_3.BackgroundTransparency = 1.000
+	arrow_forward_3.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_3.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_3.ZIndex = 2
+	arrow_forward_3.Image = "rbxassetid://3926307971"
+	arrow_forward_3.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_3.ImageRectSize = Vector2.new(36, 36)
+	
+	AbaDaHood.Name = "AbaDaHood"
+	AbaDaHood.Parent = Frame
+	AbaDaHood.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	AbaDaHood.BackgroundTransparency = 0.050
+	AbaDaHood.Position = UDim2.new(0, 0, 0.101748809, 0)
+	AbaDaHood.Size = UDim2.new(0, 389, 0, 565)
+	AbaDaHood.Visible = false
+	
+	UICorner_7.CornerRadius = UDim.new(0, 4)
+	UICorner_7.Parent = AbaDaHood
+	
+	UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_7.Parent = AbaDaHood
+	
+	SwagMode.Name = "SwagMode"
+	SwagMode.Parent = AbaDaHood
+	SwagMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	SwagMode.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	SwagMode.Size = UDim2.new(0, 308, 0, 42)
+	SwagMode.Font = Enum.Font.Roboto
+	SwagMode.Text = "Swag mode"
+	SwagMode.TextColor3 = Color3.fromRGB(0, 0, 0)
+	SwagMode.TextSize = 45.000
+	SwagMode.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+	end)
+	
+	UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_8.Parent = SwagMode
+	
+	UICorner_8.CornerRadius = UDim.new(0, 4)
+	UICorner_8.Parent = SwagMode
+	
+	arrow_forward_4.Name = "arrow_forward"
+	arrow_forward_4.Parent = SwagMode
+	arrow_forward_4.BackgroundTransparency = 1.000
+	arrow_forward_4.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_4.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_4.ZIndex = 2
+	arrow_forward_4.Image = "rbxassetid://3926307971"
+	arrow_forward_4.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_4.ImageRectSize = Vector2.new(36, 36)
+	
+	Faded.Name = "Faded"
+	Faded.Parent = AbaDaHood
+	Faded.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Faded.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
+	Faded.Size = UDim2.new(0, 308, 0, 42)
+	Faded.Font = Enum.Font.Roboto
+	Faded.Text = "Faded"
+	Faded.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Faded.TextSize = 45.000
+	Faded.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nighter132/Faded/main/YesEpic", true))()
+	end)
+	
+	UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_9.Parent = Faded
+	
+	UICorner_9.CornerRadius = UDim.new(0, 4)
+	UICorner_9.Parent = Faded
+	
+	arrow_forward_5.Name = "arrow_forward"
+	arrow_forward_5.Parent = Faded
+	arrow_forward_5.BackgroundTransparency = 1.000
+	arrow_forward_5.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_5.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_5.ZIndex = 2
+	arrow_forward_5.Image = "rbxassetid://3926307971"
+	arrow_forward_5.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_5.ImageRectSize = Vector2.new(36, 36)
+	
+	Destiny.Name = "Destiny"
+	Destiny.Parent = AbaDaHood
+	Destiny.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Destiny.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
+	Destiny.Size = UDim2.new(0, 308, 0, 42)
+	Destiny.Font = Enum.Font.Roboto
+	Destiny.Text = "Destiny"
+	Destiny.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Destiny.TextSize = 45.000
+	Destiny.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))();
+	end)
+	
+	
+	UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_10.Parent = Destiny
+	
+	UICorner_10.CornerRadius = UDim.new(0, 4)
+	UICorner_10.Parent = Destiny
+	
+	arrow_forward_6.Name = "arrow_forward"
+	arrow_forward_6.Parent = Destiny
+	arrow_forward_6.BackgroundTransparency = 1.000
+	arrow_forward_6.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_6.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_6.ZIndex = 2
+	arrow_forward_6.Image = "rbxassetid://3926307971"
+	arrow_forward_6.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_6.ImageRectSize = Vector2.new(36, 36)
+	
+	AbaAdoptme.Name = "AbaAdoptme"
+	AbaAdoptme.Parent = Frame
+	AbaAdoptme.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	AbaAdoptme.BackgroundTransparency = 0.050
+	AbaAdoptme.Position = UDim2.new(0, 0, 0.101748809, 0)
+	AbaAdoptme.Size = UDim2.new(0, 389, 0, 565)
+	AbaAdoptme.Visible = false
+	
+	UICorner_11.CornerRadius = UDim.new(0, 4)
+	UICorner_11.Parent = AbaAdoptme
+	
+	UIGradient_11.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_11.Parent = AbaAdoptme
+	
+	Adoptscript.Name = "Adopt script"
+	Adoptscript.Parent = AbaAdoptme
+	Adoptscript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Adoptscript.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	Adoptscript.Size = UDim2.new(0, 308, 0, 42)
+	Adoptscript.Font = Enum.Font.Roboto
+	Adoptscript.Text = "Adopt script"
+	Adoptscript.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Adoptscript.TextSize = 45.000
+	Adoptscript.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	end)
+	
+	UIGradient_12.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_12.Parent = Adoptscript
+	
+	UICorner_12.CornerRadius = UDim.new(0, 4)
+	UICorner_12.Parent = Adoptscript
+	
+	arrow_forward_7.Name = "arrow_forward"
+	arrow_forward_7.Parent = Adoptscript
+	arrow_forward_7.BackgroundTransparency = 1.000
+	arrow_forward_7.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_7.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_7.ZIndex = 2
+	arrow_forward_7.Image = "rbxassetid://3926307971"
+	arrow_forward_7.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_7.ImageRectSize = Vector2.new(36, 36)
+	
+	AbaJailbreak.Name = "AbaJailbreak"
+	AbaJailbreak.Parent = Frame
+	AbaJailbreak.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	AbaJailbreak.BackgroundTransparency = 0.050
+	AbaJailbreak.Position = UDim2.new(0, 0, 0.101748809, 0)
+	AbaJailbreak.Size = UDim2.new(0, 389, 0, 565)
+	AbaJailbreak.Visible = false
+	
+	UICorner_13.CornerRadius = UDim.new(0, 4)
+	UICorner_13.Parent = AbaJailbreak
+	
+	UIGradient_13.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_13.Parent = AbaJailbreak
+	
+	JailbreakScript.Name = "JailbreakScript"
+	JailbreakScript.Parent = AbaJailbreak
+	JailbreakScript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	JailbreakScript.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	JailbreakScript.Size = UDim2.new(0, 308, 0, 42)
+	JailbreakScript.Font = Enum.Font.Roboto
+	JailbreakScript.Text = "Jailbreak script"
+	JailbreakScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+	JailbreakScript.TextSize = 45.000
+	JailbreakScript.TextWrapped = true
+	JailbreakScript.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Jailbreak"))()
+	end)
+	
+	UIGradient_14.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_14.Parent = JailbreakScript
+	
+	UICorner_14.CornerRadius = UDim.new(0, 4)
+	UICorner_14.Parent = JailbreakScript
+	
+	arrow_forward_8.Name = "arrow_forward"
+	arrow_forward_8.Parent = JailbreakScript
+	arrow_forward_8.BackgroundTransparency = 1.000
+	arrow_forward_8.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_8.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_8.ZIndex = 2
+	arrow_forward_8.Image = "rbxassetid://3926307971"
+	arrow_forward_8.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_8.ImageRectSize = Vector2.new(36, 36)
+	
+	AbaExtras.Name = "AbaExtras"
+	AbaExtras.Parent = Frame
+	AbaExtras.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	AbaExtras.BackgroundTransparency = 0.050
+	AbaExtras.Position = UDim2.new(0, 0, 0.101748809, 0)
+	AbaExtras.Size = UDim2.new(0, 389, 0, 565)
+	AbaExtras.Visible = false
+	
+	UICorner_15.CornerRadius = UDim.new(0, 4)
+	UICorner_15.Parent = AbaExtras
+	
+	UIGradient_15.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_15.Parent = AbaExtras
+	
+	CorrerRapido.Name = "CorrerRapido"
+	CorrerRapido.Parent = AbaExtras
+	CorrerRapido.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CorrerRapido.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	CorrerRapido.Size = UDim2.new(0, 308, 0, 42)
+	CorrerRapido.Font = Enum.Font.Roboto
+	CorrerRapido.Text = "Correr rapido"
+	CorrerRapido.TextColor3 = Color3.fromRGB(0, 0, 0)
+	CorrerRapido.TextSize = 45.000
+	CorrerRapido.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250
+	end)
+	UIGradient_16.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_16.Parent = CorrerRapido
+	
+	UICorner_16.CornerRadius = UDim.new(0, 4)
+	UICorner_16.Parent = CorrerRapido
+	
+	arrow_forward_9.Name = "arrow_forward"
+	arrow_forward_9.Parent = CorrerRapido
+	arrow_forward_9.BackgroundTransparency = 1.000
+	arrow_forward_9.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_9.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_9.ZIndex = 2
+	arrow_forward_9.Image = "rbxassetid://3926307971"
+	arrow_forward_9.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_9.ImageRectSize = Vector2.new(36, 36)
+	
+	PularAlto.Name = "PularAlto"
+	PularAlto.Parent = AbaExtras
+	PularAlto.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	PularAlto.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
+	PularAlto.Size = UDim2.new(0, 308, 0, 42)
+	PularAlto.Font = Enum.Font.Roboto
+	PularAlto.Text = "Pular alto"
+	PularAlto.TextColor3 = Color3.fromRGB(0, 0, 0)
+	PularAlto.TextSize = 45.000
+	PularAlto.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+	end)
+	UIGradient_17.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_17.Parent = PularAlto
+	
+	UICorner_17.CornerRadius = UDim.new(0, 4)
+	UICorner_17.Parent = PularAlto
+	
+	arrow_forward_10.Name = "arrow_forward"
+	arrow_forward_10.Parent = PularAlto
+	arrow_forward_10.BackgroundTransparency = 1.000
+	arrow_forward_10.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_10.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_10.ZIndex = 2
+	arrow_forward_10.Image = "rbxassetid://3926307971"
+	arrow_forward_10.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_10.ImageRectSize = Vector2.new(36, 36)
+	
+	Admin.Name = "Admin"
+	Admin.Parent = AbaExtras
+	Admin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Admin.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
+	Admin.Size = UDim2.new(0, 308, 0, 42)
+	Admin.Font = Enum.Font.Roboto
+	Admin.Text = "Admin"
+	Admin.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Admin.TextSize = 45.000
+	Admin.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+	end)
+	UIGradient_18.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_18.Parent = Admin
+	
+	UICorner_18.CornerRadius = UDim.new(0, 4)
+	UICorner_18.Parent = Admin
+	
+	arrow_forward_11.Name = "arrow_forward"
+	arrow_forward_11.Parent = Admin
+	arrow_forward_11.BackgroundTransparency = 1.000
+	arrow_forward_11.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_11.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_11.ZIndex = 2
+	arrow_forward_11.Image = "rbxassetid://3926307971"
+	arrow_forward_11.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_11.ImageRectSize = Vector2.new(36, 36)
+	
+	CorrerNormal.Name = "CorrerNormal"
+	CorrerNormal.Parent = AbaExtras
+	CorrerNormal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CorrerNormal.Position = UDim2.new(0.0616966598, 0, 0.312289476, 0)
+	CorrerNormal.Size = UDim2.new(0, 308, 0, 42)
+	CorrerNormal.Font = Enum.Font.Roboto
+	CorrerNormal.Text = "Correr normal"
+	CorrerNormal.TextColor3 = Color3.fromRGB(0, 0, 0)
+	CorrerNormal.TextSize = 45.000
+	CorrerNormal.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	end)
+	UIGradient_19.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_19.Parent = CorrerNormal
+	
+	UICorner_19.CornerRadius = UDim.new(0, 4)
+	UICorner_19.Parent = CorrerNormal
+	
+	arrow_forward_12.Name = "arrow_forward"
+	arrow_forward_12.Parent = CorrerNormal
+	arrow_forward_12.BackgroundTransparency = 1.000
+	arrow_forward_12.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_12.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_12.ZIndex = 2
+	arrow_forward_12.Image = "rbxassetid://3926307971"
+	arrow_forward_12.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_12.ImageRectSize = Vector2.new(36, 36)
+	
+	PularNormal.Name = "PularNormal"
+	PularNormal.Parent = AbaExtras
+	PularNormal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	PularNormal.Position = UDim2.new(0.0616966598, 0, 0.404673755, 0)
+	PularNormal.Size = UDim2.new(0, 308, 0, 42)
+	PularNormal.Font = Enum.Font.Roboto
+	PularNormal.Text = "Pular normal"
+	PularNormal.TextColor3 = Color3.fromRGB(0, 0, 0)
+	PularNormal.TextSize = 45.000
+	PularNormal.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+	end)
+	
+	UIGradient_20.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_20.Parent = PularNormal
+	
+	UICorner_20.CornerRadius = UDim.new(0, 4)
+	UICorner_20.Parent = PularNormal
+	
+	arrow_forward_13.Name = "arrow_forward"
+	arrow_forward_13.Parent = PularNormal
+	arrow_forward_13.BackgroundTransparency = 1.000
+	arrow_forward_13.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_13.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_13.ZIndex = 2
+	arrow_forward_13.Image = "rbxassetid://3926307971"
+	arrow_forward_13.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_13.ImageRectSize = Vector2.new(36, 36)
+	
+	Aba1.Name = "Aba1"
+	Aba1.Parent = Frame
+	Aba1.BackgroundColor3 = Color3.fromRGB(32, 65, 255)
+	Aba1.BackgroundTransparency = 0.050
+	Aba1.Position = UDim2.new(0, 0, 0.101748809, 0)
+	Aba1.Size = UDim2.new(0, 389, 0, 565)
+	
+	UICorner_21.CornerRadius = UDim.new(0, 4)
+	UICorner_21.Parent = Aba1
+	
+	UIGradient_21.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_21.Parent = Aba1
+	
+	Jogo1.Name = "Jogo1"
+	Jogo1.Parent = Aba1
+	Jogo1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Jogo1.Position = UDim2.new(0.0616966598, 0, 0.0293006226, 0)
+	Jogo1.Size = UDim2.new(0, 308, 0, 42)
+	Jogo1.Font = Enum.Font.Roboto
+	Jogo1.Text = "Da hood"
+	Jogo1.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Jogo1.TextSize = 45.000
+	Jogo1.MouseButton1Click:Connect(function()
+		Aba1.Visible = false
+		AbaDaHood.Visible = true
+	end)
+	
+	UIGradient_22.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_22.Parent = Jogo1
+	
+	UICorner_22.CornerRadius = UDim.new(0, 4)
+	UICorner_22.Parent = Jogo1
+	
+	arrow_forward_14.Name = "arrow_forward"
+	arrow_forward_14.Parent = Jogo1
+	arrow_forward_14.BackgroundTransparency = 1.000
+	arrow_forward_14.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_14.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_14.ZIndex = 2
+	arrow_forward_14.Image = "rbxassetid://3926307971"
+	arrow_forward_14.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_14.ImageRectSize = Vector2.new(36, 36)
+	
+	Jogo2.Name = "Jogo2"
+	Jogo2.Parent = Aba1
+	Jogo2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Jogo2.Position = UDim2.new(0.0616966598, 0, 0.123100303, 0)
+	Jogo2.Size = UDim2.new(0, 308, 0, 42)
+	Jogo2.Font = Enum.Font.Roboto
+	Jogo2.Text = "Meep city"
+	Jogo2.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Jogo2.TextSize = 45.000
+	Jogo2.MouseButton1Click:Connect(function()
+		Aba1.Visible = false
+		AbaMeepCity.Visible = true
+	end)
+	
+	UIGradient_23.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_23.Parent = Jogo2
+	
+	UICorner_23.CornerRadius = UDim.new(0, 4)
+	UICorner_23.Parent = Jogo2
+	
+	arrow_forward_15.Name = "arrow_forward"
+	arrow_forward_15.Parent = Jogo2
+	arrow_forward_15.BackgroundTransparency = 1.000
+	arrow_forward_15.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_15.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_15.ZIndex = 2
+	arrow_forward_15.Image = "rbxassetid://3926307971"
+	arrow_forward_15.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_15.ImageRectSize = Vector2.new(36, 36)
+	
+	Jogo3.Name = "Jogo3"
+	Jogo3.Parent = Aba1
+	Jogo3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Jogo3.Position = UDim2.new(0.0616966598, 0, 0.218489826, 0)
+	Jogo3.Size = UDim2.new(0, 308, 0, 42)
+	Jogo3.Font = Enum.Font.Roboto
+	Jogo3.Text = "Adopt me"
+	Jogo3.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Jogo3.TextSize = 45.000
+	Jogo3.MouseButton1Click:Connect(function()
+		Aba1.Visible = false
+		AbaAdoptme.Visible = true
+	end)
+	
+	UIGradient_24.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_24.Parent = Jogo3
+	
+	UICorner_24.CornerRadius = UDim.new(0, 4)
+	UICorner_24.Parent = Jogo3
+	
+	arrow_forward_16.Name = "arrow_forward"
+	arrow_forward_16.Parent = Jogo3
+	arrow_forward_16.BackgroundTransparency = 1.000
+	arrow_forward_16.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_16.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_16.ZIndex = 2
+	arrow_forward_16.Image = "rbxassetid://3926307971"
+	arrow_forward_16.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_16.ImageRectSize = Vector2.new(36, 36)
+	
+	Jogo4.Name = "Jogo4"
+	Jogo4.Parent = Aba1
+	Jogo4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Jogo4.Position = UDim2.new(0.0616966598, 0, 0.312289476, 0)
+	Jogo4.Size = UDim2.new(0, 308, 0, 42)
+	Jogo4.Font = Enum.Font.Roboto
+	Jogo4.Text = "Jailbreak"
+	Jogo4.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Jogo4.TextSize = 45.000
+	Jogo4.MouseButton1Click:Connect(function()
+		Aba1.Visible = false
+		AbaJailbreak.Visible = true
+	end)
+	
+	UIGradient_25.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_25.Parent = Jogo4
+	
+	UICorner_25.CornerRadius = UDim.new(0, 4)
+	UICorner_25.Parent = Jogo4
+	
+	arrow_forward_17.Name = "arrow_forward"
+	arrow_forward_17.Parent = Jogo4
+	arrow_forward_17.BackgroundTransparency = 1.000
+	arrow_forward_17.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_17.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_17.ZIndex = 2
+	arrow_forward_17.Image = "rbxassetid://3926307971"
+	arrow_forward_17.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_17.ImageRectSize = Vector2.new(36, 36)
+	
+	Jogo5.Name = "Jogo5"
+	Jogo5.Parent = Aba1
+	Jogo5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Jogo5.Position = UDim2.new(0.0616966598, 0, 0.404673755, 0)
+	Jogo5.Size = UDim2.new(0, 308, 0, 42)
+	Jogo5.Font = Enum.Font.Roboto
+	Jogo5.Text = "Extras"
+	Jogo5.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Jogo5.TextSize = 45.000
+	Jogo5.MouseButton1Click:Connect(function()
+		Aba1.Visible = false
+		AbaExtras.Visible = true
+	end)
+	
+	UIGradient_26.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+	UIGradient_26.Parent = Jogo5
+	
+	UICorner_26.CornerRadius = UDim.new(0, 4)
+	UICorner_26.Parent = Jogo5
+	
+	arrow_forward_18.Name = "arrow_forward"
+	arrow_forward_18.Parent = Jogo5
+	arrow_forward_18.BackgroundTransparency = 1.000
+	arrow_forward_18.Position = UDim2.new(0.824675322, 0, 0, 0)
+	arrow_forward_18.Size = UDim2.new(0, 54, 0, 42)
+	arrow_forward_18.ZIndex = 2
+	arrow_forward_18.Image = "rbxassetid://3926307971"
+	arrow_forward_18.ImageRectOffset = Vector2.new(564, 284)
+	arrow_forward_18.ImageRectSize = Vector2.new(36, 36)
+	
+	-- Scripts:
+	
+	local function BALFRIE_fake_script() -- Frame.Script 
+		local script = Instance.new('Script', Frame)
+	
+		local MenuAberto = false
+		local Mouse = game.Players.LocalPlayer:GetMouse()
+		
+		Mouse.KeyDown:Connect(function(key)
+			if key == "p" then
+				if MenuAberto == false then
+					script.Parent.Visible = true
+					MenuAberto = true
+				else
+					script.Parent.Visible = false
+					script.Parent.Aba1.Visible = true
+					script.Parent.AbaDaHood.Visible = false
+					script.Parent.AbaExtras.Visible = false
+					script.Parent.AbaJailbreak.Visible = false
+					script.Parent.AbaMeepCity.Visible = false
+					script.Parent.AbaAdoptme.Visible = false
+					MenuAberto = false
+				end
+			end
+		end)
+		--[[ Last synced 9/7/2021 05:50 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5312212158) --[[                                                                                                  ]]--
+	end
+	coroutine.wrap(BALFRIE_fake_script)()
+		end
+	})
+	
+	NovaPagina.Button({
+		Text = "Anti fling [ Feito por mim ]! [ Atualizando: O negocio bugou e agora nao tem mais função sso",
+	   
+	})
+	
+	NovaPagina.Button({
+		Text = "Da hood pickup money [ Feito por mim tbm KKKKK ]",
+		Callback = function()
+			local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local TextLabel = Instance.new("TextLabel")
+	local Start = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local TextBox = Instance.new("TextBox")
+	local UICorner_3 = Instance.new("UICorner")
+	local TextLabel_2 = Instance.new("TextLabel")
+	
+	
+	
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	Frame.ClipsDescendants = true
+	Frame.Position = UDim2.new(0.0264496431, 0, 0.03599374, 0)
+	Frame.Size = UDim2.new(0, 0,0, 0)
+	
+	UICorner.Parent = Frame
+	
+	TextLabel.Parent = Frame
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Size = UDim2.new(0, 327, 0, 50)
+	TextLabel.Font = Enum.Font.SourceSansBold
+	TextLabel.Text = "PICKUP MONEY"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextSize = 56.000
+	
+	Start.Name = "Start"
+	Start.Parent = Frame
+	Start.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	Start.Position = UDim2.new(0.192660555, 0, 0.671641767, 0)
+	Start.Size = UDim2.new(0, 200, 0, 50)
+	Start.Font = Enum.Font.SourceSansBold
+	Start.Text = "START PICKUP"
+	Start.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Start.TextSize = 23.000
+	Start.MouseButton1Click:Connect(function()
+		for i = 1, TextBox.Text do 
+			plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+	money = game:GetService("Workspace").Ignored.Drop.MoneyDrop
+	click = game:GetService("Workspace").Ignored.Drop.MoneyDrop.ClickDetector
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	plr.CFrame = money.CFrame
+	wait()
+	wait(0.3)
+	fireclickdetector(click)
+	wait(2)
+		end
+	end)
+	
+	UICorner_2.Parent = Start
+	
+	TextBox.Parent = Frame
+	TextBox.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+	TextBox.Position = UDim2.new(0.192660555, 0, 0.373134315, 0)
+	TextBox.Size = UDim2.new(0, 200, 0, 50)
+	TextBox.Font = Enum.Font.SourceSansBold
+	TextBox.Text = "1"
+	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextBox.TextSize = 37.000
+	
+	UICorner_3.Parent = TextBox
+	
+	TextLabel_2.Parent = Frame
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.BackgroundTransparency = 1.000
+	TextLabel_2.Position = UDim2.new(0, 0, 0.318407953, 0)
+	TextLabel_2.Size = UDim2.new(0, 327, 0, 17)
+	TextLabel_2.Font = Enum.Font.SourceSansBold
+	TextLabel_2.Text = "quanty money here"
+	TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.TextScaled = true
+	TextLabel_2.TextSize = 56.000
+	TextLabel_2.TextWrapped = true
+	
+	-- Scripts:
+	
+	local function CSJFYWA_fake_script() -- Frame.Script 
+		local script = Instance.new('Script', Frame)
+	
+		script.Parent:TweenSize(UDim2.new(0, 327,0, 201), "InOut", "Quart", 1)
+		--[[ Last synced 9/3/2021 05:00 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5312212158) --[[                                                                                                  ]]--
+	end
+	coroutine.wrap(CSJFYWA_fake_script)()
+	
+		end
+	})
+	NovaPagina.Button({
+		Text = "Auto buy menu [ Feito por mim dnv ]",
+		Callback = function()
+			local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+	
+	local w = library:CreateWindow("Da hood")
+	
+	local b = w:CreateFolder("Auto buy")
+	
+	local c = w:CreateFolder("Credits")
+	
+	
+	
+	getgenv().AutoBuyAmmoRevolver = false
+	
+	getgenv().AutoBuyAmmoFlame = false
+	
+	getgenv().AutoBuyAmmoDouble = false
+	
+	getgenv().AutoBuyAmmoAk = false
+	
+	b:Button("Revolver",function()
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local pos = plr.CFrame
+	
+		plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Revolver] - $1300"].Head.CFrame
+		wait(0.3)
+		fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Revolver] - $1300"].ClickDetector)
+		wait(0.6)
+		plr.CFrame = pos
+	end)
+	
+	
+	b:Toggle("Revolver Ammo",function(bool)
+		getgenv().AutoBuyAmmoRevolver = bool
+		if bool == true then
+			spawn(function()
+				while getgenv().AutoBuyAmmoRevolver == true do wait()
+					local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local pos = plr.CFrame
+	
+					plr.CFrame = game:GetService("Workspace").Ignored.Shop["12 [Revolver Ammo] - $75"].Head.CFrame
+					wait(0.3)
+					fireclickdetector(game:GetService("Workspace").Ignored.Shop["12 [Revolver Ammo] - $75"].ClickDetector)
+				end
+			end)
+		end
+	end)
+	
+	b:Button("Doublebarrel",function()
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local pos = plr.CFrame
+	
+		plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Double-Barrel SG] - $1400"].Head.CFrame
+		wait(0.3)
+		fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Double-Barrel SG] - $1400"].ClickDetector)
+		wait(0.6)
+		plr.CFrame = pos
+	end)
+	
+	
+	b:Toggle("Doublebarrel ammo",function(bool)
+		getgenv().AutoBuyAmmoDouble = bool
+		if bool == true then
+			spawn(function()
+				while getgenv().AutoBuyAmmoDouble == true do wait()
+					local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local pos = plr.CFrame
+	
+					plr.CFrame = game:GetService("Workspace").Ignored.Shop["18 [Double-Barrel SG Ammo] - $60"].Head.CFrame
+					wait(0.3)
+					fireclickdetector(game:GetService("Workspace").Ignored.Shop["18 [Double-Barrel SG Ammo] - $60"].ClickDetector)
+				end
+			end)
+		end
+	end)
+	
+	b:Button("Ak 47",function()
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local pos = plr.CFrame
+	
+		plr.CFrame = game:GetService("Workspace").Ignored.Shop["[AK47] - $2250"].Head.CFrame
+		wait(0.3)
+		fireclickdetector(game:GetService("Workspace").Ignored.Shop["[AK47] - $2250"].ClickDetector)
+		wait(0.6)
+		plr.CFrame = pos
+	end)
+	
+	
+	b:Toggle("Ak 47 ammo",function(bool)
+		getgenv().AutoBuyAmmoAk = bool
+		if bool == true then
+			spawn(function()
+				while getgenv().AutoBuyAmmoAk == true do wait()
+					local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local pos = plr.CFrame
+	
+					plr.CFrame = game:GetService("Workspace").Ignored.Shop["90 [AK47 Ammo] - $80"].Head.CFrame
+					wait(0.3)
+					fireclickdetector(game:GetService("Workspace").Ignored.Shop["90 [AK47 Ammo] - $80"].ClickDetector)
+				end
+			end)
+		end
+	end)
+	
+	b:Button("Flamethrower",function()
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local pos = plr.CFrame
+	
+	plr.CFrame = game:GetService("Workspace").Ignored.Shop["[Flamethrower] - $25000"].Head.CFrame
+	wait(0.3)
+	fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Flamethrower] - $25000"].ClickDetector)
+	wait(0.6)
+	plr.CFrame = pos
+	end)
+	
+	b:Toggle("Flamethrower armor",function(bool)
+		getgenv().AutoBuyAmmoFlame = bool
+		if bool == true then
+			spawn(function()
+				while getgenv().AutoBuyAmmoFlame == true do wait()
+					local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local pos = plr.CFrame
+	
+					plr.CFrame = game:GetService("Workspace").Ignored.Shop["140 [Flamethrower Ammo] - $1550"].Head.CFrame
+					wait(0.3)
+					fireclickdetector(game:GetService("Workspace").Ignored.Shop["140 [Flamethrower Ammo] - $1550"].ClickDetector)
+				end
+			end)
+		end
+	end)
+	
+	
+	c:Button("Discord",function()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Discord";
+			Text = "Sucess copy to clip board";
+		})
+		setclipboard("samu#9518")
+	end)
+		end
+	})
+	
+	NovaPagina.Button({
+		Text = "Aimbot da hood",
+		Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Karz1337/ZordOverParty/main/Zord3Crack"))()
+		end
+	})
+	NovaPagina.Button({
+		Text = "Anti perma ban",
+		Callback = function()
+			game.Players.LocalPlayer:kick("Failed...")
+		wait(0.2)
+			game.Players.LocalPlayer:kick("Perma ban.")
+		end
+	})
+	
+	
+	
+	local UpdatesPage = UI.New({
+		Title = "Updates!"
+	})
+	UpdatesPage.Button({
+		Text = "Versão V3.5",
+	})
+	UpdatesPage.Button({
+		Text = 'Novidades: 2 novas scripts na pagina "Outras scripts!"',
+	})
+	
